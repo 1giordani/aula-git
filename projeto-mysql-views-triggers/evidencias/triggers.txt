@@ -1,0 +1,3 @@
+trg_colaboradores_before_insert	BEFORE	INSERT
+trg_colaboradores_before_update	BEFORE	UPDATE
+trg_usuarios_before_delete	BEFORE	DELETE
