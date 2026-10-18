@@ -1,0 +1,16 @@
+PASS: estrutura - 01_empresa.sql
+PASS: estrutura - 02_views.sql
+PASS: estrutura - 04_ecommerce_triggers.sql
+PASS: empregados por departamento/localidade, incluindo zero
+PASS: departamentos e gerentes, incluindo departamento sem gerente
+PASS: projetos ordenados por numero de empregados, incluindo projeto vazio
+PASS: projetos, departamentos e gerentes
+PASS: dependentes e indicador de gerente sem duplicar empregados
+PASS: gerente le as 7 views e empregado apenas a view publica
+PASS: acessos indevidos e escrita negados nas duas contas
+PASS: rollback da exclusao restaura usuario e pedido e desfaz arquivo
+PASS: BEFORE DELETE arquiva OLD, remove conta e preserva pedido
+PASS: BEFORE INSERT permite salario valido e rejeita zero, negativo e NULL
+PASS: BEFORE UPDATE valida, audita alteracao e ignora salario inalterado
+PASS: rollback salarial desfaz historico; operacoes invalidas preservam estado
+TODOS OS TESTES PASSARAM - MySQL 8.4.6
