@@ -1,0 +1,16 @@
+1	Tecnologia	Belo Horizonte	2
+1	Tecnologia	Nova Lima	1
+2	Operacoes	Joao Monlevade	2
+3	Pesquisa	Itabira	0
+1	Tecnologia	1	Ana
+2	Operacoes	3	Carla
+3	Pesquisa	NULL	NULL
+1	Portal	3
+2	Automacao	1
+3	Pesquisa Piloto	0
+1	Portal	Tecnologia	Ana
+2	Automacao	Operacoes	Carla
+3	Pesquisa Piloto	Pesquisa	NULL
+1	Ana	2	1
+2	Bruno	1	0
+3	Carla	1	1
