@@ -1,0 +1,16 @@
+GIORDANI - PROJETO PRONTO PARA A DIO
+
+Cole este link no campo de entrega do projeto na DIO:
+https://github.com/1giordani/aula-git/tree/projeto-mysql-transacoes-backup-recovery/projeto-mysql-ecommerce
+
+O projeto foi executado e testado no MySQL 8.4.6.
+A pasta backups contem backups reais gerados com mysqldump.
+O README explica como executar e estudar os scripts.
+A pasta evidencias registra os testes e a recuperacao validada.
+
+DESCRICAO PARA COPIAR NA DIO:
+Implementacao de transacoes no MySQL em um banco e-commerce,
+com COMMIT, ROLLBACK e SAVEPOINT. Inclui procedure com tratamento
+de erros e rollback automatico, controle de estoque, auditoria,
+view e evento. Backups reais de um e de varios bancos gerados
+com mysqldump, com recuperacao validada e evidencias incluidas.
