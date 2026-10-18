@@ -1,0 +1,2 @@
+6ec5756c0b3206cb146e809667aebd110e9139af93717677dc01ea8515496784  backups/ecommerce.sql
+2fd435b8c0ab840525e2930bcd227243309b508d563eace1d79ac4fd1eabdc1e  backups/ecommerce_logistica.sql
