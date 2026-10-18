@@ -1,0 +1,12 @@
+PASS: 01_estrutura_dados.sql
+PASS: 02_transacoes.sql
+PASS: 03_procedure_recursos.sql
+PASS: pedido confirmado, estoque 25 e total 300.00
+PASS: rollback preserva estoque, pedidos, itens e auditoria - falha simulada apos inserts
+PASS: rollback preserva estoque, pedidos, itens e auditoria - estoque insuficiente
+PASS: rollback preserva estoque, pedidos, itens e auditoria - cliente inexistente apos UPDATE
+PASS: rollback preserva estoque, pedidos, itens e auditoria - quantidade zero
+PASS: rollback preserva estoque, pedidos, itens e auditoria - quantidade nula
+PASS: rollback preserva estoque, pedidos, itens e auditoria - produto inexistente
+PASS: procedure, trigger e evento desabilitado presentes
+TODOS OS TESTES PASSARAM
