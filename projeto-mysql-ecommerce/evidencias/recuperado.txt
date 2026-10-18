@@ -1,0 +1,20 @@
+id	nome	email
+1	Cliente Demonstracao	cliente@example.com
+2	Cliente Teste	teste@example.com
+id	nome	preco	estoque
+1	Teclado	150.00	25
+2	Mouse	80.00	30
+id	cliente	criado_em	total
+1	Cliente Demonstracao	2026-10-18 11:50:46	300.00
+pedido_id	produto_id	quantidade	preco_unitario
+1	1	2	150.00
+id	produto_id	estoque_anterior	estoque_novo	alterado_em
+1	1	27	25	2026-10-18 11:50:46
+id	nome
+1	Centro Demonstracao
+ROUTINE_NAME	ROUTINE_TYPE
+sp_registrar_pedido	PROCEDURE
+TRIGGER_NAME
+trg_auditar_estoque
+EVENT_NAME	STATUS
+ev_limpar_auditoria	DISABLED
