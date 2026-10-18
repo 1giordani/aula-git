@@ -1,0 +1,10 @@
+GRANT USAGE ON *.* TO `gerente_dio`@`localhost`
+GRANT SELECT ON `empresa_views`.`vw_dados_empregados` TO `gerente_dio`@`localhost`
+GRANT SELECT ON `empresa_views`.`vw_departamentos_gerentes` TO `gerente_dio`@`localhost`
+GRANT SELECT ON `empresa_views`.`vw_empregados_departamento_localidade` TO `gerente_dio`@`localhost`
+GRANT SELECT ON `empresa_views`.`vw_empregados_dependentes_gerencia` TO `gerente_dio`@`localhost`
+GRANT SELECT ON `empresa_views`.`vw_empregados_publicos` TO `gerente_dio`@`localhost`
+GRANT SELECT ON `empresa_views`.`vw_projetos_departamentos_gerentes` TO `gerente_dio`@`localhost`
+GRANT SELECT ON `empresa_views`.`vw_projetos_quantidade_empregados` TO `gerente_dio`@`localhost`
+GRANT USAGE ON *.* TO `empregado_dio`@`localhost`
+GRANT SELECT ON `empresa_views`.`vw_empregados_publicos` TO `empregado_dio`@`localhost`
