@@ -1,0 +1,1 @@
+PASS: dados e inventario de objetos identicos apos recovery
