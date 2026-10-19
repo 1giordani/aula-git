@@ -1,0 +1,29 @@
+PASS: consultas identicas antes e depois dos indices
+PASS: dois indices BTREE criados e indice simples redundante removido
+PASS: empates no maior departamento, filtro por cidade e departamento vazio
+PASS: chamadas dos quatro controles nos dois bancos
+PASS: valores persistidos, SELECT por ID, estoque zero e UPDATE identico
+PASS: erro esperado e dados preservados - acao invalida aluno
+PASS: erro esperado e dados preservados - acao nula aluno
+PASS: erro esperado e dados preservados - acao invalida produto
+PASS: erro esperado e dados preservados - acao nula produto
+PASS: erro esperado e dados preservados - aluno sem nome
+PASS: erro esperado e dados preservados - aluno sem email
+PASS: erro esperado e dados preservados - email duplicado INSERT
+PASS: erro esperado e dados preservados - email duplicado UPDATE
+PASS: erro esperado e dados preservados - aluno inexistente UPDATE
+PASS: erro esperado e dados preservados - aluno inexistente DELETE
+PASS: erro esperado e dados preservados - produto inexistente UPDATE
+PASS: erro esperado e dados preservados - produto inexistente DELETE
+PASS: erro esperado e dados preservados - produto invalido INSERT 0/1
+PASS: erro esperado e dados preservados - produto invalido UPDATE 0/1
+PASS: erro esperado e dados preservados - produto invalido INSERT -1/1
+PASS: erro esperado e dados preservados - produto invalido UPDATE -1/1
+PASS: erro esperado e dados preservados - produto invalido INSERT NULL/1
+PASS: erro esperado e dados preservados - produto invalido UPDATE NULL/1
+PASS: erro esperado e dados preservados - produto invalido INSERT 10/-1
+PASS: erro esperado e dados preservados - produto invalido UPDATE 10/-1
+PASS: erro esperado e dados preservados - produto invalido INSERT 10/NULL
+PASS: erro esperado e dados preservados - produto invalido UPDATE 10/NULL
+PASS: DELETE efetivo e SELECT de ID inexistente retorna vazio
+TODOS OS TESTES PASSARAM - MySQL 8.4.6
