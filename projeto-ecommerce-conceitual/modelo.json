@@ -1,0 +1,707 @@
+{
+  "title": "E-commerce — modelo conceitual refinado",
+  "author": "Giordani Martins Silva",
+  "entities": {
+    "cliente": {
+      "label": "CLIENTE",
+      "fields": [
+        "PK id_cliente",
+        "tipo_cliente: PF | PJ",
+        "nome_exibicao",
+        "email"
+      ],
+      "notes": "Especialização total e exclusiva (XOR)"
+    },
+    "pf": {
+      "label": "PESSOA FÍSICA",
+      "fields": [
+        "PK, FK id_cliente",
+        "UK cpf",
+        "nome_completo"
+      ],
+      "notes": ""
+    },
+    "pj": {
+      "label": "PESSOA JURÍDICA",
+      "fields": [
+        "PK, FK id_cliente",
+        "UK cnpj",
+        "razao_social"
+      ],
+      "notes": ""
+    },
+    "forma": {
+      "label": "FORMA DE PAGAMENTO",
+      "fields": [
+        "PK id_forma",
+        "FK id_cliente",
+        "tipo: cartão | PIX | boleto",
+        "apelido / referência do provedor"
+      ],
+      "notes": ""
+    },
+    "pedido": {
+      "label": "PEDIDO",
+      "fields": [
+        "PK id_pedido",
+        "FK id_cliente",
+        "data_criacao, status_pedido",
+        "endereco_entrega_snapshot",
+        "frete, desconto"
+      ],
+      "notes": ""
+    },
+    "pagamento": {
+      "label": "PAGAMENTO",
+      "fields": [
+        "PK id_pagamento",
+        "FK id_pedido",
+        "FK id_forma",
+        "valor, status_pagamento",
+        "data_pagamento (opcional)"
+      ],
+      "notes": ""
+    },
+    "entrega": {
+      "label": "ENTREGA",
+      "fields": [
+        "PK id_entrega",
+        "UK, FK id_pedido",
+        "status_entrega, transportadora",
+        "codigo_rastreio (condicional)",
+        "UK (transportadora, codigo_rastreio)"
+      ],
+      "notes": ""
+    },
+    "produto": {
+      "label": "PRODUTO",
+      "fields": [
+        "PK id_produto",
+        "descricao",
+        "categoria"
+      ],
+      "notes": ""
+    },
+    "item": {
+      "label": "ITEM DO PEDIDO",
+      "fields": [
+        "PK, FK id_pedido",
+        "PK numero_item",
+        "FK id_oferta",
+        "quantidade",
+        "preco_unitario_praticado"
+      ],
+      "notes": ""
+    },
+    "oferta": {
+      "label": "OFERTA",
+      "fields": [
+        "PK id_oferta",
+        "FK id_produto",
+        "FK id_vendedor",
+        "preco_atual, ativo",
+        "UK (id_produto, id_vendedor)"
+      ],
+      "notes": ""
+    },
+    "vendedor": {
+      "label": "VENDEDOR",
+      "fields": [
+        "PK id_vendedor",
+        "nome / razao_social",
+        "tipo: plataforma | terceiro"
+      ],
+      "notes": ""
+    },
+    "fornecedor": {
+      "label": "FORNECEDOR",
+      "fields": [
+        "PK id_fornecedor",
+        "UK cnpj",
+        "razao_social"
+      ],
+      "notes": ""
+    },
+    "fornecimento": {
+      "label": "FORNECIMENTO",
+      "fields": [
+        "PK, FK id_fornecedor",
+        "PK, FK id_produto",
+        "referencia_fornecedor"
+      ],
+      "notes": ""
+    },
+    "estoque": {
+      "label": "ESTOQUE",
+      "fields": [
+        "PK id_estoque",
+        "localizacao"
+      ],
+      "notes": ""
+    },
+    "produto_estoque": {
+      "label": "PRODUTO NO ESTOQUE",
+      "fields": [
+        "PK, FK id_produto",
+        "PK, FK id_estoque",
+        "quantidade_disponivel"
+      ],
+      "notes": ""
+    }
+  },
+  "relations": [
+    {
+      "parent": "cliente",
+      "child": "pf",
+      "parent_card": "1",
+      "child_card": "0..1",
+      "fk_fields": [
+        "id_cliente"
+      ],
+      "label": "especializa"
+    },
+    {
+      "parent": "cliente",
+      "child": "pj",
+      "parent_card": "1",
+      "child_card": "0..1",
+      "fk_fields": [
+        "id_cliente"
+      ],
+      "label": "especializa"
+    },
+    {
+      "parent": "cliente",
+      "child": "pedido",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "id_cliente"
+      ],
+      "label": "realiza"
+    },
+    {
+      "parent": "cliente",
+      "child": "forma",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "id_cliente"
+      ],
+      "label": "cadastra"
+    },
+    {
+      "parent": "pedido",
+      "child": "pagamento",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "id_pedido"
+      ],
+      "label": "recebe"
+    },
+    {
+      "parent": "forma",
+      "child": "pagamento",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "id_forma"
+      ],
+      "label": "utilizada em"
+    },
+    {
+      "parent": "pedido",
+      "child": "entrega",
+      "parent_card": "1",
+      "child_card": "0..1",
+      "fk_fields": [
+        "id_pedido"
+      ],
+      "label": "origina"
+    },
+    {
+      "parent": "pedido",
+      "child": "item",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "id_pedido"
+      ],
+      "label": "contém"
+    },
+    {
+      "parent": "oferta",
+      "child": "item",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "id_oferta"
+      ],
+      "label": "referenciada em"
+    },
+    {
+      "parent": "produto",
+      "child": "oferta",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "id_produto"
+      ],
+      "label": "ofertado em"
+    },
+    {
+      "parent": "vendedor",
+      "child": "oferta",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "id_vendedor"
+      ],
+      "label": "publica"
+    },
+    {
+      "parent": "fornecedor",
+      "child": "fornecimento",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "id_fornecedor"
+      ],
+      "label": "participa"
+    },
+    {
+      "parent": "produto",
+      "child": "fornecimento",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "id_produto"
+      ],
+      "label": "fornecido em"
+    },
+    {
+      "parent": "estoque",
+      "child": "produto_estoque",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "id_estoque"
+      ],
+      "label": "armazena"
+    },
+    {
+      "parent": "produto",
+      "child": "produto_estoque",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "id_produto"
+      ],
+      "label": "possui saldo em"
+    }
+  ],
+  "pages": [
+    {
+      "id": "01",
+      "title": "Clientes, pagamentos e entrega",
+      "subtitle": "PF ou PJ: especialização total e exclusiva. Cada conta pertence a exatamente um subtipo.",
+      "nodes": {
+        "cliente": [
+          560,
+          110,
+          380,
+          220
+        ],
+        "pf": [
+          60,
+          130,
+          320,
+          180
+        ],
+        "pj": [
+          1120,
+          130,
+          320,
+          180
+        ],
+        "pedido": [
+          70,
+          510,
+          380,
+          220
+        ],
+        "forma": [
+          1060,
+          510,
+          380,
+          220
+        ],
+        "pagamento": [
+          650,
+          810,
+          380,
+          240
+        ],
+        "entrega": [
+          70,
+          860,
+          430,
+          210
+        ]
+      },
+      "edges": [
+        [
+          0,
+          [
+            [
+              560,
+              220
+            ],
+            [
+              380,
+              220
+            ]
+          ],
+          460,
+          198
+        ],
+        [
+          1,
+          [
+            [
+              940,
+              220
+            ],
+            [
+              1120,
+              220
+            ]
+          ],
+          1030,
+          198
+        ],
+        [
+          2,
+          [
+            [
+              650,
+              330
+            ],
+            [
+              650,
+              415
+            ],
+            [
+              260,
+              415
+            ],
+            [
+              260,
+              510
+            ]
+          ],
+          430,
+          398
+        ],
+        [
+          3,
+          [
+            [
+              850,
+              330
+            ],
+            [
+              850,
+              415
+            ],
+            [
+              1250,
+              415
+            ],
+            [
+              1250,
+              510
+            ]
+          ],
+          1050,
+          398
+        ],
+        [
+          4,
+          [
+            [
+              450,
+              620
+            ],
+            [
+              550,
+              620
+            ],
+            [
+              550,
+              900
+            ],
+            [
+              650,
+              900
+            ]
+          ],
+          547,
+          770
+        ],
+        [
+          5,
+          [
+            [
+              1060,
+              620
+            ],
+            [
+              1030,
+              620
+            ],
+            [
+              1030,
+              930
+            ]
+          ],
+          1130,
+          785
+        ],
+        [
+          6,
+          [
+            [
+              260,
+              730
+            ],
+            [
+              260,
+              860
+            ]
+          ],
+          260,
+          800
+        ]
+      ],
+      "footer": "Regras: PF XOR PJ; a forma usada pertence ao cliente do pedido; rastreio obrigatório após postagem."
+    },
+    {
+      "id": "02",
+      "title": "Pedidos, produtos e vendedores",
+      "subtitle": "A oferta identifica o produto e quem o vende; o item preserva o preço praticado na compra.",
+      "nodes": {
+        "pedido": [
+          60,
+          160,
+          380,
+          220
+        ],
+        "item": [
+          600,
+          140,
+          360,
+          260
+        ],
+        "oferta": [
+          1120,
+          130,
+          360,
+          270
+        ],
+        "produto": [
+          1120,
+          720,
+          360,
+          190
+        ],
+        "vendedor": [
+          590,
+          720,
+          390,
+          190
+        ]
+      },
+      "edges": [
+        [
+          7,
+          [
+            [
+              440,
+              270
+            ],
+            [
+              600,
+              270
+            ]
+          ],
+          520,
+          245
+        ],
+        [
+          8,
+          [
+            [
+              1120,
+              270
+            ],
+            [
+              960,
+              270
+            ]
+          ],
+          1040,
+          245
+        ],
+        [
+          9,
+          [
+            [
+              1300,
+              720
+            ],
+            [
+              1300,
+              400
+            ]
+          ],
+          1300,
+          560
+        ],
+        [
+          10,
+          [
+            [
+              980,
+              815
+            ],
+            [
+              1050,
+              815
+            ],
+            [
+              1050,
+              500
+            ],
+            [
+              1220,
+              500
+            ],
+            [
+              1220,
+              400
+            ]
+          ],
+          1050,
+          650
+        ]
+      ],
+      "footer": "Pedido em rascunho pode ter 0 itens; pedido confirmado deve conter 1 ou mais. Quantidade > 0."
+    },
+    {
+      "id": "03",
+      "title": "Fornecimento e estoque",
+      "subtitle": "Relações N:N são representadas por entidades associativas com chaves compostas.",
+      "nodes": {
+        "fornecedor": [
+          60,
+          170,
+          360,
+          220
+        ],
+        "fornecimento": [
+          610,
+          170,
+          360,
+          220
+        ],
+        "produto": [
+          1160,
+          170,
+          360,
+          200
+        ],
+        "estoque": [
+          60,
+          750,
+          360,
+          180
+        ],
+        "produto_estoque": [
+          610,
+          730,
+          400,
+          220
+        ]
+      },
+      "edges": [
+        [
+          11,
+          [
+            [
+              420,
+              280
+            ],
+            [
+              610,
+              280
+            ]
+          ],
+          515,
+          255
+        ],
+        [
+          12,
+          [
+            [
+              1160,
+              280
+            ],
+            [
+              970,
+              280
+            ]
+          ],
+          1065,
+          255
+        ],
+        [
+          13,
+          [
+            [
+              420,
+              840
+            ],
+            [
+              610,
+              840
+            ]
+          ],
+          515,
+          815
+        ],
+        [
+          14,
+          [
+            [
+              1340,
+              370
+            ],
+            [
+              1340,
+              840
+            ],
+            [
+              1010,
+              840
+            ]
+          ],
+          1335,
+          610
+        ]
+      ],
+      "footer": "Saldos são registrados por produto e local de estoque. Quantidade disponível >= 0."
+    }
+  ]
+}
