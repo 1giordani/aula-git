@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1180" viewBox="0 0 1600 1180" role="img" aria-labelledby="title desc">
+<title id="title">Serviços, peças e composição do valor</title><desc id="desc">Referências atuais orientam o orçamento; cada item da OS preserva o valor unitário aplicado.</desc>
+<g font-family="DejaVu Sans,Arial,sans-serif">
+<rect width="1600" height="1180" fill="#10141b"/>
+<text x="60" y="48" font-size="28" fill="#ebc17d" text-anchor="start" font-weight="bold">OFICINA / 03 — Serviços, peças e composição do valor</text>
+<text x="60" y="84" font-size="17" fill="#eae2d4" text-anchor="start" font-weight="normal">Referências atuais orientam o orçamento; cada item da OS preserva o valor unitário aplicado.</text>
+<polyline points="500,260 670,260" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="511" y="230" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="536" y="248" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="609" y="230" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="634" y="248" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="485" y="180" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="585" y="200" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">inclui serviço</text>
+<polyline points="1220,260 1040,260" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="1159" y="230" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1184" y="248" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="1051" y="230" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1076" y="248" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="1030" y="180" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="1130" y="200" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">referencia</text>
+<polyline points="500,420 570,420 570,845 670,845" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="511" y="390" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="536" y="408" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="609" y="815" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="634" y="833" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="470" y="610" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="570" y="630" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">inclui peça</text>
+<polyline points="1220,845 1040,845" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="1159" y="815" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1184" y="833" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="1051" y="815" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1076" y="833" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="1030" y="765" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="1130" y="785" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">referencia</text>
+<rect x="50" y="110" width="450" height="390" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="70" y="143" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">ORDEM DE SERVIÇO</text>
+<line x1="50" y1="160" x2="500" y2="160" stroke="#a99576"/>
+<text x="70" y="190" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK numero_os</text>
+<text x="70" y="217" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">FK id_cliente_solicitante</text>
+<text x="70" y="244" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">FK id_veiculo</text>
+<text x="70" y="271" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">FK id_equipe</text>
+<text x="70" y="298" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">data_emissao</text>
+<text x="70" y="325" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">data_prevista_conclusao</text>
+<text x="70" y="352" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">data_efetiva_conclusao (opcional)</text>
+<text x="70" y="379" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">tipo_atendimento: reparo | revisão</text>
+<text x="70" y="406" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">status</text>
+<text x="70" y="433" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">valor_total (derivado)</text>
+<rect x="670" y="130" width="370" height="270" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="690" y="163" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">SERVIÇO DA OS</text>
+<line x1="670" y1="180" x2="1040" y2="180" stroke="#a99576"/>
+<text x="690" y="210" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK, FK numero_os</text>
+<text x="690" y="237" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK, FK id_servico</text>
+<text x="690" y="264" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">quantidade</text>
+<text x="690" y="291" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">valor_unitario_aplicado</text>
+<text x="690" y="318" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">subtotal (derivado)</text>
+<rect x="1220" y="130" width="340" height="240" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="1240" y="163" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">SERVIÇO / MÃO DE OBRA</text>
+<line x1="1220" y1="180" x2="1560" y2="180" stroke="#a99576"/>
+<text x="1240" y="210" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK id_servico</text>
+<text x="1240" y="237" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">descricao</text>
+<text x="1240" y="264" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">unidade_cobranca: hora | serviço</text>
+<text x="1240" y="291" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">valor_unitario_referencia</text>
+<rect x="670" y="710" width="370" height="270" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="690" y="743" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">PEÇA DA OS</text>
+<line x1="670" y1="760" x2="1040" y2="760" stroke="#a99576"/>
+<text x="690" y="790" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK, FK numero_os</text>
+<text x="690" y="817" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK, FK id_peca</text>
+<text x="690" y="844" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">quantidade</text>
+<text x="690" y="871" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">valor_unitario_aplicado</text>
+<text x="690" y="898" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">subtotal (derivado)</text>
+<rect x="1220" y="710" width="340" height="240" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="1240" y="743" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">PEÇA</text>
+<line x1="1220" y1="760" x2="1560" y2="760" stroke="#a99576"/>
+<text x="1240" y="790" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK id_peca</text>
+<text x="1240" y="817" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">descricao</text>
+<text x="1240" y="844" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">valor_unitario_referencia</text>
+<text x="60" y="1122" font-size="17" fill="#ebc17d" text-anchor="start" font-weight="normal">Valor total da OS = soma dos subtotais dos serviços + soma dos subtotais das peças.</text>
+<text x="60" y="1155" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK = chave primária   |   FK = chave estrangeira   |   UK = chave única   |   0..N = zero ou muitos   |   0..1 = opcional</text>
+<text x="1530" y="1155" font-size="15" fill="#eae2d4" text-anchor="end" font-weight="normal">Giordani Martins Silva</text>
+</g></svg>
