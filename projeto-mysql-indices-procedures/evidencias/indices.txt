@@ -1,0 +1,8 @@
+departamentos	PRIMARY	1	id	BTREE
+empregados	idx_empregados_departamento_nome	1	departamento_id	BTREE
+empregados	idx_empregados_departamento_nome	2	nome	BTREE
+empregados	PRIMARY	1	id	BTREE
+localidades_departamento	idx_localidades_cidade_departamento	1	cidade	BTREE
+localidades_departamento	idx_localidades_cidade_departamento	2	departamento_id	BTREE
+localidades_departamento	PRIMARY	1	departamento_id	BTREE
+localidades_departamento	PRIMARY	2	cidade	BTREE
