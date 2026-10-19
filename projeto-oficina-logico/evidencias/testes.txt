@@ -1,0 +1,50 @@
+PASS: executado 01_estrutura.sql
+PASS: executado 02_regras.sql
+PASS: executado 03_dados.sql
+PASS: seis totais calculados, OS sem itens e valor de OSs concluidas
+PASS: Q01 - 5 linha(s) conferida(s)
+PASS: Q02 - 1 linha(s) conferida(s)
+PASS: Q03 - 6 linha(s) conferida(s)
+PASS: Q04 - 6 linha(s) conferida(s)
+PASS: Q05 - 2 linha(s) conferida(s)
+PASS: Q06 - 3 linha(s) conferida(s)
+PASS: Q07 - 6 linha(s) conferida(s)
+PASS: Q08 - 1 linha(s) conferida(s)
+PASS: Q09 - 2 linha(s) conferida(s)
+PASS: Q10 - 3 linha(s) conferida(s)
+PASS: Q11 - 2 linha(s) conferida(s)
+PASS: Q12 - 1 linha(s) conferida(s)
+PASS: Q13 - 5 linha(s) conferida(s)
+PASS: Q14 - 1 linha(s) conferida(s)
+PASS: fluxo completo ate conclusao e rollback sem alterar a massa
+PASS: total 790.00 com dois servicos e duas pecas, sem produto cartesiano
+PASS: solicitante historico preservado na alteracao de proprietario
+PASS: rejeitado sem alterar dados - placa duplicada
+PASS: rejeitado sem alterar dados - cliente inexistente
+PASS: rejeitado sem alterar dados - solicitante incorreto
+PASS: rejeitado sem alterar dados - equipe sem integrante
+PASS: rejeitado sem alterar dados - previsao anterior a emissao
+PASS: rejeitado sem alterar dados - troca de equipe
+PASS: rejeitado sem alterar dados - sem autorizacao
+PASS: rejeitado sem alterar dados - pular estado
+PASS: rejeitado sem alterar dados - orcamento sem servico
+PASS: rejeitado sem alterar dados - item congelado INSERT
+PASS: rejeitado sem alterar dados - item congelado UPDATE
+PASS: rejeitado sem alterar dados - item congelado DELETE
+PASS: rejeitado sem alterar dados - autorizacao outro cliente
+PASS: rejeitado sem alterar dados - valor divergente
+PASS: rejeitado sem alterar dados - decisao antes da emissao
+PASS: rejeitado sem alterar dados - decisao fora do estado
+PASS: rejeitado sem alterar dados - alterar decisao
+PASS: rejeitado sem alterar dados - excluir decisao
+PASS: rejeitado sem alterar dados - reabrir cancelada
+PASS: rejeitado sem alterar dados - conclusao sem data
+PASS: rejeitado sem alterar dados - alterar composicao
+PASS: rejeitado sem alterar dados - excluir composicao
+PASS: rejeitado sem alterar dados - incluir composicao
+PASS: rejeitado sem alterar dados - servico quantidade zero
+PASS: rejeitado sem alterar dados - servico fixo fracionado
+PASS: rejeitado sem alterar dados - peca quantidade zero
+PASS: rejeitado sem alterar dados - referencia inexistente
+PASS: sobreposicao de participacao rejeitada; massa restaurada
+TODOS OS TESTES PASSARAM - MySQL 8.4.6

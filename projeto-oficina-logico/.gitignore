@@ -1,0 +1,5 @@
+mysql-*.ini
+!mysql-local.example.ini
+__pycache__/
+.env
+*.tmp

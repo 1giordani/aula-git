@@ -1,0 +1,28 @@
+TABLE_NAME	TABLE_TYPE
+autorizacao	BASE TABLE
+cliente	BASE TABLE
+composicao_equipe	BASE TABLE
+equipe	BASE TABLE
+mecanico	BASE TABLE
+ordem_servico	BASE TABLE
+peca	BASE TABLE
+peca_os	BASE TABLE
+servico	BASE TABLE
+servico_os	BASE TABLE
+veiculo	BASE TABLE
+vw_total_os	VIEW
+TRIGGER_NAME
+trg_autorizacao_bd
+trg_autorizacao_bi
+trg_autorizacao_bu
+trg_composicao_bd
+trg_composicao_bi
+trg_composicao_bu
+trg_os_bi
+trg_os_bu
+trg_peca_os_bd
+trg_peca_os_bi
+trg_peca_os_bu
+trg_servico_os_bd
+trg_servico_os_bi
+trg_servico_os_bu

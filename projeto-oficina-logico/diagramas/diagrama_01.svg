@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1180" viewBox="0 0 1600 1180" role="img" aria-labelledby="title desc">
+<title id="title">Atendimento, ordem de serviço e autorização</title><desc id="desc">Tabelas e chaves do modelo implementado. Tipos completos e FKs compostas constam no dicionário.</desc>
+<g font-family="DejaVu Sans,Arial,sans-serif">
+<rect width="1600" height="1180" fill="#10141b"/>
+<text x="60" y="48" font-size="28" fill="#ebc17d" text-anchor="start" font-weight="bold">OFICINA LÓGICA / 01 — Atendimento, ordem de serviço e autorização</text>
+<text x="60" y="84" font-size="17" fill="#eae2d4" text-anchor="start" font-weight="normal">Tabelas e chaves do modelo implementado. Tipos completos e FKs compostas constam no dicionário.</text>
+<polyline points="430,200 1120,200" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="441" y="170" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="466" y="188" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="1059" y="170" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1084" y="188" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="675" y="120" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="775" y="140" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">possui atualmente</text>
+<polyline points="245,330 245,400 650,400 650,450" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="253" y="340" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="278" y="358" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="658" y="414" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="683" y="432" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="340" y="358" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="440" y="378" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">solicita</text>
+<polyline points="1320,340 1320,400 920,400 920,450" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="1328" y="350" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1353" y="368" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="928" y="414" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="953" y="432" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="1020" y="358" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="1120" y="378" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">recebe</text>
+<polyline points="440,940 500,940 500,660 560,660" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="451" y="910" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="476" y="928" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="499" y="630" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="524" y="648" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="240" y="775" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="340" y="795" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">avalia e executa</text>
+<polyline points="1010,690 1060,690 1060,875 1100,875" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="1021" y="660" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1046" y="678" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="1039" y="845" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1064" y="863" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..1</text>
+<rect x="1025" y="690" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="1125" y="710" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">recebe decisão</text>
+<polyline points="60,220 20,220 20,1070 1560,1070 1560,900 1530,900" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="-1" y="190" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="24" y="208" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="1541" y="870" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1566" y="888" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="900" y="1030" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="1000" y="1050" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">autoriza ou recusa</text>
+<rect x="60" y="120" width="370" height="210" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="80" y="153" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">CLIENTE</text>
+<line x1="60" y1="170" x2="430" y2="170" stroke="#a99576"/>
+<text x="80" y="200" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK id_cliente INT UNSIGNED</text>
+<text x="80" y="227" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">nome</text>
+<text x="80" y="254" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">telefone, email</text>
+<text x="80" y="281" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">endereco</text>
+<rect x="1120" y="120" width="400" height="220" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="1140" y="153" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">VEICULO</text>
+<line x1="1120" y1="170" x2="1520" y2="170" stroke="#a99576"/>
+<text x="1140" y="200" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK id_veiculo INT UNSIGNED</text>
+<text x="1140" y="227" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">FK id_cliente_atual INT UNSIGNED</text>
+<text x="1140" y="254" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">UK placa</text>
+<text x="1140" y="281" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">marca, modelo, ano</text>
+<rect x="560" y="450" width="450" height="390" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="580" y="483" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">ORDEM_SERVICO</text>
+<line x1="560" y1="500" x2="1010" y2="500" stroke="#a99576"/>
+<text x="580" y="530" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK numero_os INT UNSIGNED</text>
+<text x="580" y="557" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">FK id_cliente_solicitante INT UNSIGNED</text>
+<text x="580" y="584" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">FK id_veiculo INT UNSIGNED</text>
+<text x="580" y="611" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">FK id_equipe INT UNSIGNED</text>
+<text x="580" y="638" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">data_emissao</text>
+<text x="580" y="665" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">data_prevista_conclusao</text>
+<text x="580" y="692" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">data_efetiva_conclusao (opcional)</text>
+<text x="580" y="719" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">tipo_atendimento: reparo | revisão</text>
+<text x="580" y="746" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">status</text>
+<text x="580" y="773" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">valor_total -&gt; VIEW vw_total_os</text>
+<rect x="60" y="850" width="380" height="180" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="80" y="883" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">EQUIPE</text>
+<line x1="60" y1="900" x2="440" y2="900" stroke="#a99576"/>
+<text x="80" y="930" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK id_equipe INT UNSIGNED</text>
+<text x="80" y="957" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">nome_equipe</text>
+<rect x="1100" y="750" width="430" height="290" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="1120" y="783" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">AUTORIZACAO</text>
+<line x1="1100" y1="800" x2="1530" y2="800" stroke="#a99576"/>
+<text x="1120" y="830" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK id_autorizacao INT UNSIGNED</text>
+<text x="1120" y="857" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">UK, FK numero_os</text>
+<text x="1120" y="884" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">FK id_cliente INT UNSIGNED</text>
+<text x="1120" y="911" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">decisao: autorizada | recusada</text>
+<text x="1120" y="938" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">data_decisao</text>
+<text x="1120" y="965" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">valor_orcado</text>
+<text x="60" y="1122" font-size="17" fill="#ebc17d" text-anchor="start" font-weight="normal">Execução exige decisão autorizada do cliente solicitante. A OS registra previsão e conclusão efetiva.</text>
+<text x="60" y="1155" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK = chave primária   |   FK = chave estrangeira   |   UK = chave única   |   0..N = zero ou muitos   |   0..1 = opcional</text>
+<text x="1530" y="1155" font-size="15" fill="#eae2d4" text-anchor="end" font-weight="normal">Giordani Martins Silva</text>
+</g></svg>

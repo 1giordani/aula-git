@@ -1,0 +1,85 @@
+Q01 - Quais mecanicos estao cadastrados e quais sao suas especialidades?
+codigo_mecanico	nome	especialidade
+3	Mecanica C	Injecao
+5	Mecanica E	Eletrica
+1	Mecanico A	Freios
+2	Mecanico B	Mecanica geral
+4	Mecanico D	Lubrificacao
+
+Q02 - Quais OSs abertas estao atrasadas na data de referencia?
+numero_os	status	data_prevista_conclusao	dias_atraso
+1002	EM_EXECUCAO	2026-10-15	4
+
+Q03 - Quanto custa cada servico aplicado a uma OS?
+numero_os	descricao	quantidade	unidade_aplicada	valor_unitario_aplicado	subtotal_calculado
+1001	Troca de pastilhas	1.00	SERVICO	120.00	120.00
+1002	Diagnostico por hora	2.00	HORA	150.00	300.00
+1003	Revisao periodica	1.00	SERVICO	250.00	250.00
+1005	Troca de pastilhas	1.00	SERVICO	120.00	120.00
+1006	Diagnostico por hora	2.00	HORA	150.00	300.00
+1006	Revisao periodica	1.00	SERVICO	250.00	250.00
+
+Q04 - Qual o valor de servicos, pecas e total de cada OS, do maior para o menor?
+numero_os	total_servicos	total_pecas	valor_total	status
+1006	550.00	200.00	750.00	CONCLUIDA
+1002	300.00	200.00	500.00	EM_EXECUCAO
+1003	250.00	200.00	450.00	AGUARDANDO_AUTORIZACAO
+1001	120.00	160.00	280.00	CONCLUIDA
+1005	120.00	0.00	120.00	CANCELADA
+1004	0.00	0.00	0.00	EM_AVALIACAO
+
+Q05 - Quais clientes solicitaram pelo menos duas OSs?
+id_cliente	nome	quantidade_os
+1	Cliente Ana	2
+2	Cliente Bruno	2
+
+Q06 - Quantas OSs e qual o valor das ordens de cada equipe, incluindo equipes sem OS?
+id_equipe	nome_equipe	quantidade_os	valor_das_ordens
+2	Equipe Revisao	3	1250.00
+1	Equipe Freios	3	850.00
+3	Equipe em Formacao	0	0.00
+
+Q07 - Qual a visao completa de cada atendimento e sua decisao de autorizacao?
+numero_os	cliente	placa	nome_equipe	tipo_atendimento	status	decisao	valor_total
+1001	Cliente Ana	AAA1A01	Equipe Freios	REPARO	CONCLUIDA	AUTORIZADA	280.00
+1002	Cliente Bruno	AAA1A02	Equipe Revisao	REPARO	EM_EXECUCAO	AUTORIZADA	500.00
+1003	Cliente Ana	AAA1A03	Equipe Freios	REVISAO	AGUARDANDO_AUTORIZACAO	SEM DECISAO	450.00
+1004	Cliente Carla	AAA1A04	Equipe Revisao	REVISAO	EM_AVALIACAO	SEM DECISAO	0.00
+1005	Cliente Bruno	AAA1A02	Equipe Freios	REPARO	CANCELADA	RECUSADA	120.00
+1006	Cliente Diego	AAA1A05	Equipe Revisao	REVISAO	CONCLUIDA	AUTORIZADA	750.00
+
+Q08 - Quais clientes ainda nao possuem nenhuma OS?
+id_cliente	nome
+5	Cliente Eva
+
+Q09 - Quais pecas foram usadas em OSs concluidas e qual seu valor acumulado?
+id_peca	descricao	unidades	valor_aplicado
+3	Oleo - unidade	4	200.00
+1	Pastilha	2	160.00
+
+Q10 - Quais mecanicos integram cada equipe na data de referencia?
+id_equipe	nome_equipe	mecanicos_ativos	integrantes
+1	Equipe Freios	2	Mecanico A, Mecanico B
+2	Equipe Revisao	2	Mecanica C, Mecanico D
+3	Equipe em Formacao	0	SEM INTEGRANTES
+
+Q11 - Quais itens mantiveram preco historico diferente da referencia atual?
+numero_os	descricao	valor_unitario_aplicado	valor_unitario_referencia	diferenca_unitaria
+1001	Troca de pastilhas	120.00	130.00	10.00
+1005	Troca de pastilhas	120.00	130.00	10.00
+
+Q12 - Quais OSs concluidas ultrapassaram a previsao, e em quantos dias?
+numero_os	data_prevista_conclusao	data_efetiva_conclusao	dias_atraso
+1006	2026-10-10	2026-10-11	1
+
+Q13 - Qual o ranking dos clientes pelo valor de OSs nao canceladas, incluindo quem nao tem OS?
+id_cliente	nome	valor_ordens	posicao
+4	Cliente Diego	750.00	1
+1	Cliente Ana	730.00	2
+2	Cliente Bruno	500.00	3
+3	Cliente Carla	0.00	4
+5	Cliente Eva	0.00	4
+
+Q14 - Quais servicos somam pelo menos R$300 em OSs autorizadas, em execucao ou concluidas?
+id_servico	descricao	quantidade	valor
+2	Diagnostico por hora	4.00	600.00

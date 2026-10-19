@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="pagina01" name="Atendimento, ordem de serviço e autorização">
+    <mxGraphModel page="1" pageWidth="1600" pageHeight="1180" background="#10141b" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="heading" value="Atendimento, ordem de serviço e autorização" style="text;html=1;fontColor=#ebc17d;fontSize=27;align=left;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="15" width="1500" height="40" />
+        </mxCell>
+        <mxCell id="subtitle" value="Tabelas e chaves do modelo implementado. Tipos completos e FKs compostas constam no dicionário." style="text;html=1;fontColor=#eae2d4;fontSize=17;align=left;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="60" width="1500" height="40" />
+        </mxCell>
+        <mxCell id="card0True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="438" y="168" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card0False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1056" y="168" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge0" value="possui atualmente" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=1.0;exitY=0.38095238095238093;exitDx=0;exitDy=0;entryX=0.0;entryY=0.36363636363636365;entryDx=0;entryDy=0;" edge="1" parent="1" source="cliente" target="veiculo">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-45" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card1True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="250" y="338" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card1False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="655" y="412" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge1" value="solicita" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.2;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cliente" target="os">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="245" y="400" />
+              <mxPoint x="650" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card2True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1325" y="348" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card2False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="925" y="412" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge2" value="recebe" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.8;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="veiculo" target="os">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1320" y="400" />
+              <mxPoint x="920" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card3True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="448" y="908" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card3False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="496" y="628" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge3" value="avalia e executa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5384615384615384;entryDx=0;entryDy=0;" edge="1" parent="1" source="equipe" target="os">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="500" y="940" />
+              <mxPoint x="500" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card4True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1018" y="658" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card4False" value="0..1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1036" y="843" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge4" value="recebe decisão" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=1.0;exitY=0.6153846153846154;exitDx=0;exitDy=0;entryX=0.0;entryY=0.43103448275862066;entryDx=0;entryDy=0;" edge="1" parent="1" source="os" target="autorizacao">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1060" y="690" />
+              <mxPoint x="1060" y="875" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card5True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="-4" y="188" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card5False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1538" y="868" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge5" value="autoriza ou recusa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=0.0;exitY=0.47619047619047616;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5172413793103449;entryDx=0;entryDy=0;" edge="1" parent="1" source="cliente" target="autorizacao">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="20" y="220" />
+              <mxPoint x="20" y="1070" />
+              <mxPoint x="1560" y="1070" />
+              <mxPoint x="1560" y="900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cliente" value="&lt;b&gt;CLIENTE&lt;/b&gt;&lt;hr/&gt;PK id_cliente INT UNSIGNED&lt;br/&gt;nome&lt;br/&gt;telefone, email&lt;br/&gt;endereco" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="120" width="370" height="210" />
+        </mxCell>
+        <mxCell id="veiculo" value="&lt;b&gt;VEICULO&lt;/b&gt;&lt;hr/&gt;PK id_veiculo INT UNSIGNED&lt;br/&gt;FK id_cliente_atual INT UNSIGNED&lt;br/&gt;UK placa&lt;br/&gt;marca, modelo, ano" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1120" y="120" width="400" height="220" />
+        </mxCell>
+        <mxCell id="os" value="&lt;b&gt;ORDEM_SERVICO&lt;/b&gt;&lt;hr/&gt;PK numero_os INT UNSIGNED&lt;br/&gt;FK id_cliente_solicitante INT UNSIGNED&lt;br/&gt;FK id_veiculo INT UNSIGNED&lt;br/&gt;FK id_equipe INT UNSIGNED&lt;br/&gt;data_emissao&lt;br/&gt;data_prevista_conclusao&lt;br/&gt;data_efetiva_conclusao (opcional)&lt;br/&gt;tipo_atendimento: reparo | revisão&lt;br/&gt;status&lt;br/&gt;valor_total -&amp;gt; VIEW vw_total_os" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="560" y="450" width="450" height="390" />
+        </mxCell>
+        <mxCell id="equipe" value="&lt;b&gt;EQUIPE&lt;/b&gt;&lt;hr/&gt;PK id_equipe INT UNSIGNED&lt;br/&gt;nome_equipe" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="850" width="380" height="180" />
+        </mxCell>
+        <mxCell id="autorizacao" value="&lt;b&gt;AUTORIZACAO&lt;/b&gt;&lt;hr/&gt;PK id_autorizacao INT UNSIGNED&lt;br/&gt;UK, FK numero_os&lt;br/&gt;FK id_cliente INT UNSIGNED&lt;br/&gt;decisao: autorizada | recusada&lt;br/&gt;data_decisao&lt;br/&gt;valor_orcado" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1100" y="750" width="430" height="290" />
+        </mxCell>
+        <mxCell id="footer" value="Execução exige decisão autorizada do cliente solicitante. A OS registra previsão e conclusão efetiva." style="text;html=1;align=left;fontSize=17;fontColor=#ebc17d;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="1095" width="1500" height="40" />
+        </mxCell>
+        <mxCell id="legend" value="PK = chave primária | FK = chave estrangeira | UK = chave única | 0..N = zero ou muitos | 0..1 = opcional" style="text;html=1;align=left;fontSize=16;fontColor=#eae2d4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="1130" width="1500" height="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="pagina02" name="Equipes e mecânicos">
+    <mxGraphModel page="1" pageWidth="1600" pageHeight="1180" background="#10141b" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="heading" value="Equipes e mecânicos" style="text;html=1;fontColor=#ebc17d;fontSize=27;align=left;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="15" width="1500" height="40" />
+        </mxCell>
+        <mxCell id="subtitle" value="Participação N:N com chave composta. Triggers protegem a composição de equipes com OS aberta." style="text;html=1;fontColor=#eae2d4;fontSize=17;align=left;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="60" width="1500" height="40" />
+        </mxCell>
+        <mxCell id="card6True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="448" y="253" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card6False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="556" y="253" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge6" value="possui participação" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=1.0;exitY=0.5277777777777778;exitDx=0;exitDy=0;entryX=0.0;entryY=0.4423076923076923;entryDx=0;entryDy=0;" edge="1" parent="1" source="equipe" target="composicao">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-45" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card7True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1126" y="253" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card7False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1028" y="253" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge7" value="integra" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=0.0;exitY=0.4423076923076923;exitDx=0;exitDy=0;entryX=1.0;entryY=0.4423076923076923;entryDx=0;entryDy=0;" edge="1" parent="1" source="mecanico" target="composicao">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-45" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card3True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="255" y="378" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card3False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="850" y="652" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge3" value="avalia e executa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="equipe" target="os">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="250" y="575" />
+              <mxPoint x="845" y="575" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="equipe" value="&lt;b&gt;EQUIPE&lt;/b&gt;&lt;hr/&gt;PK id_equipe INT UNSIGNED&lt;br/&gt;nome_equipe" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="190" width="380" height="180" />
+        </mxCell>
+        <mxCell id="composicao" value="&lt;b&gt;COMPOSICAO_EQUIPE&lt;/b&gt;&lt;hr/&gt;PK, FK id_equipe INT UNSIGNED&lt;br/&gt;PK, FK codigo_mecanico INT UNSIGNED&lt;br/&gt;PK data_inicio DATE&lt;br/&gt;data_fim (opcional)" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="620" y="170" width="400" height="260" />
+        </mxCell>
+        <mxCell id="mecanico" value="&lt;b&gt;MECANICO&lt;/b&gt;&lt;hr/&gt;PK codigo_mecanico INT UNSIGNED&lt;br/&gt;nome&lt;br/&gt;endereco&lt;br/&gt;especialidade" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1190" y="170" width="360" height="260" />
+        </mxCell>
+        <mxCell id="os" value="&lt;b&gt;ORDEM_SERVICO&lt;/b&gt;&lt;hr/&gt;PK numero_os INT UNSIGNED&lt;br/&gt;FK id_cliente_solicitante INT UNSIGNED&lt;br/&gt;FK id_veiculo INT UNSIGNED&lt;br/&gt;FK id_equipe INT UNSIGNED&lt;br/&gt;data_emissao&lt;br/&gt;data_prevista_conclusao&lt;br/&gt;data_efetiva_conclusao (opcional)&lt;br/&gt;tipo_atendimento: reparo | revisão&lt;br/&gt;status&lt;br/&gt;valor_total -&amp;gt; VIEW vw_total_os" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="620" y="690" width="450" height="390" />
+        </mxCell>
+        <mxCell id="footer" value="Equipe pode estar em formação; para assumir uma OS, deve ter ao menos um mecânico ativo." style="text;html=1;align=left;fontSize=17;fontColor=#ebc17d;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="1095" width="1500" height="40" />
+        </mxCell>
+        <mxCell id="legend" value="PK = chave primária | FK = chave estrangeira | UK = chave única | 0..N = zero ou muitos | 0..1 = opcional" style="text;html=1;align=left;fontSize=16;fontColor=#eae2d4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="1130" width="1500" height="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="pagina03" name="Serviços, peças e composição do valor">
+    <mxGraphModel page="1" pageWidth="1600" pageHeight="1180" background="#10141b" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="heading" value="Serviços, peças e composição do valor" style="text;html=1;fontColor=#ebc17d;fontSize=27;align=left;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="15" width="1500" height="40" />
+        </mxCell>
+        <mxCell id="subtitle" value="Subtotais são colunas geradas; o total da OS é uma view com agregações independentes." style="text;html=1;fontColor=#eae2d4;fontSize=17;align=left;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="60" width="1500" height="40" />
+        </mxCell>
+        <mxCell id="card8True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="508" y="228" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card8False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="606" y="228" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge8" value="inclui serviço" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=1.0;exitY=0.38461538461538464;exitDx=0;exitDy=0;entryX=0.0;entryY=0.48148148148148145;entryDx=0;entryDy=0;" edge="1" parent="1" source="os" target="servico_os">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-45" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card9True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1156" y="228" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card9False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1048" y="228" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge9" value="referencia" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=0.0;exitY=0.5416666666666666;exitDx=0;exitDy=0;entryX=1.0;entryY=0.48148148148148145;entryDx=0;entryDy=0;" edge="1" parent="1" source="servico" target="servico_os">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-45" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card10True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="508" y="388" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card10False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="606" y="813" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge10" value="inclui peça" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=1.0;exitY=0.7948717948717948;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="os" target="peca_os">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="570" y="420" />
+              <mxPoint x="570" y="845" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card11True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1156" y="813" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card11False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1048" y="813" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge11" value="referencia" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=0.0;exitY=0.5625;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="peca" target="peca_os">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-45" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="os" value="&lt;b&gt;ORDEM_SERVICO&lt;/b&gt;&lt;hr/&gt;PK numero_os INT UNSIGNED&lt;br/&gt;FK id_cliente_solicitante INT UNSIGNED&lt;br/&gt;FK id_veiculo INT UNSIGNED&lt;br/&gt;FK id_equipe INT UNSIGNED&lt;br/&gt;data_emissao&lt;br/&gt;data_prevista_conclusao&lt;br/&gt;data_efetiva_conclusao (opcional)&lt;br/&gt;tipo_atendimento: reparo | revisão&lt;br/&gt;status&lt;br/&gt;valor_total -&amp;gt; VIEW vw_total_os" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="110" width="450" height="390" />
+        </mxCell>
+        <mxCell id="servico_os" value="&lt;b&gt;SERVICO_OS&lt;/b&gt;&lt;hr/&gt;PK, FK numero_os INT UNSIGNED&lt;br/&gt;PK, FK id_servico INT UNSIGNED&lt;br/&gt;quantidade&lt;br/&gt;unidade_aplicada ENUM (histórica)&lt;br/&gt;valor_unitario_aplicado&lt;br/&gt;subtotal DECIMAL GENERATED" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="670" y="130" width="370" height="270" />
+        </mxCell>
+        <mxCell id="servico" value="&lt;b&gt;SERVICO&lt;/b&gt;&lt;hr/&gt;PK id_servico INT UNSIGNED&lt;br/&gt;descricao&lt;br/&gt;unidade_cobranca: hora | serviço&lt;br/&gt;valor_unitario_referencia" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1220" y="130" width="340" height="240" />
+        </mxCell>
+        <mxCell id="peca_os" value="&lt;b&gt;PECA_OS&lt;/b&gt;&lt;hr/&gt;PK, FK numero_os INT UNSIGNED&lt;br/&gt;PK, FK id_peca INT UNSIGNED&lt;br/&gt;quantidade&lt;br/&gt;valor_unitario_aplicado&lt;br/&gt;subtotal DECIMAL GENERATED" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="670" y="710" width="370" height="270" />
+        </mxCell>
+        <mxCell id="peca" value="&lt;b&gt;PECA&lt;/b&gt;&lt;hr/&gt;PK id_peca INT UNSIGNED&lt;br/&gt;descricao&lt;br/&gt;valor_unitario_referencia" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1220" y="710" width="340" height="240" />
+        </mxCell>
+        <mxCell id="footer" value="Valor total da OS = soma dos subtotais dos serviços + soma dos subtotais das peças." style="text;html=1;align=left;fontSize=17;fontColor=#ebc17d;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="1095" width="1500" height="40" />
+        </mxCell>
+        <mxCell id="legend" value="PK = chave primária | FK = chave estrangeira | UK = chave única | 0..N = zero ou muitos | 0..1 = opcional" style="text;html=1;align=left;fontSize=16;fontColor=#eae2d4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="1130" width="1500" height="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

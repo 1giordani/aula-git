@@ -1,0 +1,55 @@
+TABLE_NAME	COLUMN_NAME	COLUMN_TYPE	IS_NULLABLE	COLUMN_KEY	EXTRA	GENERATION_EXPRESSION
+autorizacao	id_autorizacao	int unsigned	NO	PRI		
+autorizacao	numero_os	int unsigned	NO	UNI		
+autorizacao	id_cliente	int unsigned	NO	MUL		
+autorizacao	decisao	enum('AUTORIZADA','RECUSADA')	NO			
+autorizacao	data_decisao	datetime	NO			
+autorizacao	valor_orcado	decimal(14,2)	NO			
+cliente	id_cliente	int unsigned	NO	PRI		
+cliente	nome	varchar(100)	NO			
+cliente	telefone	varchar(20)	YES			
+cliente	email	varchar(150)	YES			
+cliente	endereco	varchar(200)	NO			
+composicao_equipe	id_equipe	int unsigned	NO	PRI		
+composicao_equipe	codigo_mecanico	int unsigned	NO	PRI		
+composicao_equipe	data_inicio	date	NO	PRI		
+composicao_equipe	data_fim	date	YES			
+equipe	id_equipe	int unsigned	NO	PRI		
+equipe	nome_equipe	varchar(100)	NO			
+mecanico	codigo_mecanico	int unsigned	NO	PRI		
+mecanico	nome	varchar(100)	NO			
+mecanico	endereco	varchar(200)	NO			
+mecanico	especialidade	varchar(100)	NO			
+ordem_servico	numero_os	int unsigned	NO	PRI		
+ordem_servico	id_cliente_solicitante	int unsigned	NO	MUL		
+ordem_servico	id_veiculo	int unsigned	NO	MUL		
+ordem_servico	id_equipe	int unsigned	NO	MUL		
+ordem_servico	data_emissao	date	NO			
+ordem_servico	data_prevista_conclusao	date	NO			
+ordem_servico	data_efetiva_conclusao	date	YES			
+ordem_servico	tipo_atendimento	enum('REPARO','REVISAO')	NO			
+ordem_servico	status	enum('EM_AVALIACAO','AGUARDANDO_AUTORIZACAO','AUTORIZADA','EM_EXECUCAO','CONCLUIDA','CANCELADA')	NO	MUL		
+peca	id_peca	int unsigned	NO	PRI		
+peca	descricao	varchar(150)	NO			
+peca	valor_unitario_referencia	decimal(10,2)	NO			
+peca_os	numero_os	int unsigned	NO	PRI		
+peca_os	id_peca	int unsigned	NO	PRI		
+peca_os	quantidade	int unsigned	NO			
+peca_os	valor_unitario_aplicado	decimal(10,2)	NO			
+peca_os	subtotal	decimal(14,2)	YES		STORED GENERATED	(`quantidade` * `valor_unitario_aplicado`)
+servico	id_servico	int unsigned	NO	PRI		
+servico	descricao	varchar(150)	NO			
+servico	unidade_cobranca	enum('HORA','SERVICO')	NO			
+servico	valor_unitario_referencia	decimal(10,2)	NO			
+servico_os	numero_os	int unsigned	NO	PRI		
+servico_os	id_servico	int unsigned	NO	PRI		
+servico_os	quantidade	decimal(8,2)	NO			
+servico_os	unidade_aplicada	enum('HORA','SERVICO')	NO			
+servico_os	valor_unitario_aplicado	decimal(10,2)	NO			
+servico_os	subtotal	decimal(14,2)	YES		STORED GENERATED	round((`quantidade` * `valor_unitario_aplicado`),2)
+veiculo	id_veiculo	int unsigned	NO	PRI		
+veiculo	id_cliente_atual	int unsigned	NO	MUL		
+veiculo	placa	char(7)	NO	UNI		
+veiculo	marca	varchar(50)	NO			
+veiculo	modelo	varchar(80)	NO			
+veiculo	ano	smallint unsigned	NO			
