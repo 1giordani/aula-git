@@ -1,0 +1,8 @@
+1	Aluno Demonstracao	aluno@example.com
+2
+2	Aluno Atualizado	atualizado@example.com
+1	Aluno Demonstracao	aluno@example.com
+1	Teclado	150.00	20
+2
+2	Mouse Atualizado	90.00	25
+1	Teclado	150.00	20
