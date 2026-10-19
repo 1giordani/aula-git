@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1180" viewBox="0 0 1600 1180" role="img" aria-labelledby="title desc">
+<title id="title">Fornecimento e estoque</title><desc id="desc">Relações N:N são representadas por entidades associativas com chaves compostas.</desc>
+<g font-family="DejaVu Sans,Arial,sans-serif">
+<rect width="1600" height="1180" fill="#10141b"/>
+<text x="60" y="48" font-size="28" fill="#ebc17d" text-anchor="start" font-weight="bold">E-COMMERCE / 03 — Fornecimento e estoque</text>
+<text x="60" y="84" font-size="17" fill="#eae2d4" text-anchor="start" font-weight="normal">Relações N:N são representadas por entidades associativas com chaves compostas.</text>
+<polyline points="420,280 610,280" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="431" y="250" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="456" y="268" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="549" y="250" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="574" y="268" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="415" y="200" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="515" y="220" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">participa</text>
+<polyline points="1160,280 970,280" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="1099" y="250" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1124" y="268" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="981" y="250" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1006" y="268" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="965" y="200" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="1065" y="220" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">fornecido em</text>
+<polyline points="420,840 610,840" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="431" y="810" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="456" y="828" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="549" y="810" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="574" y="828" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="415" y="760" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="515" y="780" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">armazena</text>
+<polyline points="1340,370 1340,840 1010,840" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="1348" y="380" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1373" y="398" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="1021" y="810" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1046" y="828" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="1235" y="590" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="1335" y="610" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">possui saldo em</text>
+<rect x="60" y="170" width="360" height="220" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="80" y="203" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">FORNECEDOR</text>
+<line x1="60" y1="220" x2="420" y2="220" stroke="#a99576"/>
+<text x="80" y="250" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK id_fornecedor</text>
+<text x="80" y="277" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">UK cnpj</text>
+<text x="80" y="304" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">razao_social</text>
+<rect x="610" y="170" width="360" height="220" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="630" y="203" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">FORNECIMENTO</text>
+<line x1="610" y1="220" x2="970" y2="220" stroke="#a99576"/>
+<text x="630" y="250" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK, FK id_fornecedor</text>
+<text x="630" y="277" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK, FK id_produto</text>
+<text x="630" y="304" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">referencia_fornecedor</text>
+<rect x="1160" y="170" width="360" height="200" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="1180" y="203" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">PRODUTO</text>
+<line x1="1160" y1="220" x2="1520" y2="220" stroke="#a99576"/>
+<text x="1180" y="250" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK id_produto</text>
+<text x="1180" y="277" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">descricao</text>
+<text x="1180" y="304" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">categoria</text>
+<rect x="60" y="750" width="360" height="180" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="80" y="783" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">ESTOQUE</text>
+<line x1="60" y1="800" x2="420" y2="800" stroke="#a99576"/>
+<text x="80" y="830" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK id_estoque</text>
+<text x="80" y="857" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">localizacao</text>
+<rect x="610" y="730" width="400" height="220" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="630" y="763" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">PRODUTO NO ESTOQUE</text>
+<line x1="610" y1="780" x2="1010" y2="780" stroke="#a99576"/>
+<text x="630" y="810" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK, FK id_produto</text>
+<text x="630" y="837" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK, FK id_estoque</text>
+<text x="630" y="864" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">quantidade_disponivel</text>
+<text x="60" y="1122" font-size="17" fill="#ebc17d" text-anchor="start" font-weight="normal">Saldos são registrados por produto e local de estoque. Quantidade disponível &gt;= 0.</text>
+<text x="60" y="1155" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK = chave primária   |   FK = chave estrangeira   |   UK = chave única   |   0..N = zero ou muitos   |   0..1 = opcional</text>
+<text x="1530" y="1155" font-size="15" fill="#eae2d4" text-anchor="end" font-weight="normal">Giordani Martins Silva</text>
+</g></svg>
