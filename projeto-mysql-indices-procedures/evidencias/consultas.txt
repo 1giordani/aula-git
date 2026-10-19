@@ -1,0 +1,12 @@
+1	Tecnologia	3
+2	Operacoes	3
+Belo Horizonte	1	Tecnologia
+Belo Horizonte	3	Financeiro
+1	Tecnologia	1	Ana
+1	Tecnologia	2	Bruno
+1	Tecnologia	3	Carla
+2	Operacoes	4	Diego
+2	Operacoes	5	Eva
+2	Operacoes	6	Fabio
+3	Financeiro	7	Gabriela
+4	Pesquisa	NULL	NULL
