@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1180" viewBox="0 0 1600 1180" role="img" aria-labelledby="title desc">
+<title id="title">Pedidos, produtos e vendedores</title><desc id="desc">A oferta identifica o produto e quem o vende; o item preserva o preço praticado na compra.</desc>
+<g font-family="DejaVu Sans,Arial,sans-serif">
+<rect width="1600" height="1180" fill="#10141b"/>
+<text x="60" y="48" font-size="28" fill="#ebc17d" text-anchor="start" font-weight="bold">E-COMMERCE / 02 — Pedidos, produtos e vendedores</text>
+<text x="60" y="84" font-size="17" fill="#eae2d4" text-anchor="start" font-weight="normal">A oferta identifica o produto e quem o vende; o item preserva o preço praticado na compra.</text>
+<polyline points="440,270 600,270" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="451" y="240" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="476" y="258" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="539" y="240" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="564" y="258" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="420" y="190" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="520" y="210" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">contém</text>
+<polyline points="1120,270 960,270" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="1059" y="240" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1084" y="258" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="971" y="240" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="996" y="258" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="940" y="190" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="1040" y="210" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">referenciada em</text>
+<polyline points="1300,720 1300,400" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="1308" y="684" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1333" y="702" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="1308" y="410" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1333" y="428" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="1200" y="540" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="1300" y="560" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">ofertado em</text>
+<polyline points="980,815 1050,815 1050,500 1220,500 1220,400" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="991" y="785" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1016" y="803" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="1228" y="410" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1253" y="428" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="950" y="630" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="1050" y="650" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">publica</text>
+<rect x="60" y="160" width="380" height="220" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="80" y="193" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">PEDIDO</text>
+<line x1="60" y1="210" x2="440" y2="210" stroke="#a99576"/>
+<text x="80" y="240" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK id_pedido</text>
+<text x="80" y="267" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">FK id_cliente</text>
+<text x="80" y="294" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">data_criacao, status_pedido</text>
+<text x="80" y="321" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">endereco_entrega_snapshot</text>
+<text x="80" y="348" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">frete, desconto</text>
+<rect x="600" y="140" width="360" height="260" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="620" y="173" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">ITEM DO PEDIDO</text>
+<line x1="600" y1="190" x2="960" y2="190" stroke="#a99576"/>
+<text x="620" y="220" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK, FK id_pedido</text>
+<text x="620" y="247" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK numero_item</text>
+<text x="620" y="274" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">FK id_oferta</text>
+<text x="620" y="301" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">quantidade</text>
+<text x="620" y="328" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">preco_unitario_praticado</text>
+<rect x="1120" y="130" width="360" height="270" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="1140" y="163" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">OFERTA</text>
+<line x1="1120" y1="180" x2="1480" y2="180" stroke="#a99576"/>
+<text x="1140" y="210" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK id_oferta</text>
+<text x="1140" y="237" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">FK id_produto</text>
+<text x="1140" y="264" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">FK id_vendedor</text>
+<text x="1140" y="291" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">preco_atual, ativo</text>
+<text x="1140" y="318" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">UK (id_produto, id_vendedor)</text>
+<rect x="1120" y="720" width="360" height="190" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="1140" y="753" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">PRODUTO</text>
+<line x1="1120" y1="770" x2="1480" y2="770" stroke="#a99576"/>
+<text x="1140" y="800" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK id_produto</text>
+<text x="1140" y="827" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">descricao</text>
+<text x="1140" y="854" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">categoria</text>
+<rect x="590" y="720" width="390" height="190" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="610" y="753" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">VENDEDOR</text>
+<line x1="590" y1="770" x2="980" y2="770" stroke="#a99576"/>
+<text x="610" y="800" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK id_vendedor</text>
+<text x="610" y="827" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">nome / razao_social</text>
+<text x="610" y="854" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">tipo: plataforma | terceiro</text>
+<text x="60" y="1122" font-size="17" fill="#ebc17d" text-anchor="start" font-weight="normal">Pedido em rascunho pode ter 0 itens; pedido confirmado deve conter 1 ou mais. Quantidade &gt; 0.</text>
+<text x="60" y="1155" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK = chave primária   |   FK = chave estrangeira   |   UK = chave única   |   0..N = zero ou muitos   |   0..1 = opcional</text>
+<text x="1530" y="1155" font-size="15" fill="#eae2d4" text-anchor="end" font-weight="normal">Giordani Martins Silva</text>
+</g></svg>
