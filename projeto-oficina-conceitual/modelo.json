@@ -1,0 +1,620 @@
+{
+  "title": "Oficina mecânica — esquema conceitual",
+  "author": "Giordani Martins Silva",
+  "entities": {
+    "cliente": {
+      "label": "CLIENTE",
+      "fields": [
+        "PK id_cliente",
+        "nome",
+        "telefone, email",
+        "endereco"
+      ],
+      "notes": ""
+    },
+    "veiculo": {
+      "label": "VEÍCULO",
+      "fields": [
+        "PK id_veiculo",
+        "FK id_cliente_atual",
+        "UK placa",
+        "marca, modelo, ano"
+      ],
+      "notes": ""
+    },
+    "equipe": {
+      "label": "EQUIPE",
+      "fields": [
+        "PK id_equipe",
+        "nome_equipe"
+      ],
+      "notes": ""
+    },
+    "mecanico": {
+      "label": "MECÂNICO",
+      "fields": [
+        "PK codigo_mecanico",
+        "nome",
+        "endereco",
+        "especialidade"
+      ],
+      "notes": ""
+    },
+    "composicao": {
+      "label": "COMPOSIÇÃO DA EQUIPE",
+      "fields": [
+        "PK, FK id_equipe",
+        "PK, FK codigo_mecanico",
+        "PK data_inicio",
+        "data_fim (opcional)"
+      ],
+      "notes": ""
+    },
+    "os": {
+      "label": "ORDEM DE SERVIÇO",
+      "fields": [
+        "PK numero_os",
+        "FK id_cliente_solicitante",
+        "FK id_veiculo",
+        "FK id_equipe",
+        "data_emissao",
+        "data_prevista_conclusao",
+        "data_efetiva_conclusao (opcional)",
+        "tipo_atendimento: reparo | revisão",
+        "status",
+        "valor_total (derivado)"
+      ],
+      "notes": ""
+    },
+    "autorizacao": {
+      "label": "AUTORIZAÇÃO",
+      "fields": [
+        "PK id_autorizacao",
+        "UK, FK numero_os",
+        "FK id_cliente",
+        "decisao: autorizada | recusada",
+        "data_decisao",
+        "valor_orcado"
+      ],
+      "notes": ""
+    },
+    "servico": {
+      "label": "SERVIÇO / MÃO DE OBRA",
+      "fields": [
+        "PK id_servico",
+        "descricao",
+        "unidade_cobranca: hora | serviço",
+        "valor_unitario_referencia"
+      ],
+      "notes": ""
+    },
+    "servico_os": {
+      "label": "SERVIÇO DA OS",
+      "fields": [
+        "PK, FK numero_os",
+        "PK, FK id_servico",
+        "quantidade",
+        "valor_unitario_aplicado",
+        "subtotal (derivado)"
+      ],
+      "notes": ""
+    },
+    "peca": {
+      "label": "PEÇA",
+      "fields": [
+        "PK id_peca",
+        "descricao",
+        "valor_unitario_referencia"
+      ],
+      "notes": ""
+    },
+    "peca_os": {
+      "label": "PEÇA DA OS",
+      "fields": [
+        "PK, FK numero_os",
+        "PK, FK id_peca",
+        "quantidade",
+        "valor_unitario_aplicado",
+        "subtotal (derivado)"
+      ],
+      "notes": ""
+    }
+  },
+  "relations": [
+    {
+      "parent": "cliente",
+      "child": "veiculo",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "id_cliente_atual"
+      ],
+      "label": "possui atualmente"
+    },
+    {
+      "parent": "cliente",
+      "child": "os",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "id_cliente_solicitante"
+      ],
+      "label": "solicita"
+    },
+    {
+      "parent": "veiculo",
+      "child": "os",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "id_veiculo"
+      ],
+      "label": "recebe"
+    },
+    {
+      "parent": "equipe",
+      "child": "os",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "id_equipe"
+      ],
+      "label": "avalia e executa"
+    },
+    {
+      "parent": "os",
+      "child": "autorizacao",
+      "parent_card": "1",
+      "child_card": "0..1",
+      "fk_fields": [
+        "numero_os"
+      ],
+      "label": "recebe decisão"
+    },
+    {
+      "parent": "cliente",
+      "child": "autorizacao",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "id_cliente"
+      ],
+      "label": "autoriza ou recusa"
+    },
+    {
+      "parent": "equipe",
+      "child": "composicao",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "id_equipe"
+      ],
+      "label": "possui participação"
+    },
+    {
+      "parent": "mecanico",
+      "child": "composicao",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "codigo_mecanico"
+      ],
+      "label": "integra"
+    },
+    {
+      "parent": "os",
+      "child": "servico_os",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "numero_os"
+      ],
+      "label": "inclui serviço"
+    },
+    {
+      "parent": "servico",
+      "child": "servico_os",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "id_servico"
+      ],
+      "label": "referencia"
+    },
+    {
+      "parent": "os",
+      "child": "peca_os",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "numero_os"
+      ],
+      "label": "inclui peça"
+    },
+    {
+      "parent": "peca",
+      "child": "peca_os",
+      "parent_card": "1",
+      "child_card": "0..N",
+      "fk_fields": [
+        "id_peca"
+      ],
+      "label": "referencia"
+    }
+  ],
+  "pages": [
+    {
+      "id": "01",
+      "title": "Atendimento, ordem de serviço e autorização",
+      "subtitle": "Cada OS tem uma única equipe responsável, que realiza tanto a avaliação quanto a execução.",
+      "nodes": {
+        "cliente": [
+          60,
+          120,
+          370,
+          210
+        ],
+        "veiculo": [
+          1120,
+          120,
+          400,
+          220
+        ],
+        "os": [
+          560,
+          450,
+          450,
+          390
+        ],
+        "equipe": [
+          60,
+          850,
+          380,
+          180
+        ],
+        "autorizacao": [
+          1100,
+          750,
+          430,
+          290
+        ]
+      },
+      "edges": [
+        [
+          0,
+          [
+            [
+              430,
+              200
+            ],
+            [
+              1120,
+              200
+            ]
+          ],
+          775,
+          175
+        ],
+        [
+          1,
+          [
+            [
+              245,
+              330
+            ],
+            [
+              245,
+              400
+            ],
+            [
+              650,
+              400
+            ],
+            [
+              650,
+              450
+            ]
+          ],
+          440,
+          378
+        ],
+        [
+          2,
+          [
+            [
+              1320,
+              340
+            ],
+            [
+              1320,
+              400
+            ],
+            [
+              920,
+              400
+            ],
+            [
+              920,
+              450
+            ]
+          ],
+          1120,
+          378
+        ],
+        [
+          3,
+          [
+            [
+              440,
+              940
+            ],
+            [
+              500,
+              940
+            ],
+            [
+              500,
+              660
+            ],
+            [
+              560,
+              660
+            ]
+          ],
+          340,
+          795
+        ],
+        [
+          4,
+          [
+            [
+              1010,
+              690
+            ],
+            [
+              1060,
+              690
+            ],
+            [
+              1060,
+              875
+            ],
+            [
+              1100,
+              875
+            ]
+          ],
+          1125,
+          710
+        ],
+        [
+          5,
+          [
+            [
+              60,
+              220
+            ],
+            [
+              20,
+              220
+            ],
+            [
+              20,
+              1070
+            ],
+            [
+              1560,
+              1070
+            ],
+            [
+              1560,
+              900
+            ],
+            [
+              1530,
+              900
+            ]
+          ],
+          1000,
+          1050
+        ]
+      ],
+      "footer": "Execução exige decisão autorizada do cliente solicitante. A OS registra previsão e conclusão efetiva."
+    },
+    {
+      "id": "02",
+      "title": "Equipes e mecânicos",
+      "subtitle": "A composição registra os mecânicos de cada equipe e o período de participação.",
+      "nodes": {
+        "equipe": [
+          60,
+          190,
+          380,
+          180
+        ],
+        "composicao": [
+          620,
+          170,
+          400,
+          260
+        ],
+        "mecanico": [
+          1190,
+          170,
+          360,
+          260
+        ],
+        "os": [
+          620,
+          690,
+          450,
+          390
+        ]
+      },
+      "edges": [
+        [
+          6,
+          [
+            [
+              440,
+              285
+            ],
+            [
+              620,
+              285
+            ]
+          ],
+          530,
+          260
+        ],
+        [
+          7,
+          [
+            [
+              1190,
+              285
+            ],
+            [
+              1020,
+              285
+            ]
+          ],
+          1105,
+          260
+        ],
+        [
+          3,
+          [
+            [
+              250,
+              370
+            ],
+            [
+              250,
+              575
+            ],
+            [
+              845,
+              575
+            ],
+            [
+              845,
+              690
+            ]
+          ],
+          520,
+          553
+        ]
+      ],
+      "footer": "Equipe pode estar em formação; para assumir uma OS, deve ter ao menos um mecânico ativo."
+    },
+    {
+      "id": "03",
+      "title": "Serviços, peças e composição do valor",
+      "subtitle": "Referências atuais orientam o orçamento; cada item da OS preserva o valor unitário aplicado.",
+      "nodes": {
+        "os": [
+          50,
+          110,
+          450,
+          390
+        ],
+        "servico_os": [
+          670,
+          130,
+          370,
+          270
+        ],
+        "servico": [
+          1220,
+          130,
+          340,
+          240
+        ],
+        "peca_os": [
+          670,
+          710,
+          370,
+          270
+        ],
+        "peca": [
+          1220,
+          710,
+          340,
+          240
+        ]
+      },
+      "edges": [
+        [
+          8,
+          [
+            [
+              500,
+              260
+            ],
+            [
+              670,
+              260
+            ]
+          ],
+          585,
+          235
+        ],
+        [
+          9,
+          [
+            [
+              1220,
+              260
+            ],
+            [
+              1040,
+              260
+            ]
+          ],
+          1130,
+          235
+        ],
+        [
+          10,
+          [
+            [
+              500,
+              420
+            ],
+            [
+              570,
+              420
+            ],
+            [
+              570,
+              845
+            ],
+            [
+              670,
+              845
+            ]
+          ],
+          570,
+          630
+        ],
+        [
+          11,
+          [
+            [
+              1220,
+              845
+            ],
+            [
+              1040,
+              845
+            ]
+          ],
+          1130,
+          820
+        ]
+      ],
+      "footer": "Valor total da OS = soma dos subtotais dos serviços + soma dos subtotais das peças."
+    }
+  ]
+}
