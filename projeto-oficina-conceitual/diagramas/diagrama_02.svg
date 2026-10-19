@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1180" viewBox="0 0 1600 1180" role="img" aria-labelledby="title desc">
+<title id="title">Equipes e mecânicos</title><desc id="desc">A composição registra os mecânicos de cada equipe e o período de participação.</desc>
+<g font-family="DejaVu Sans,Arial,sans-serif">
+<rect width="1600" height="1180" fill="#10141b"/>
+<text x="60" y="48" font-size="28" fill="#ebc17d" text-anchor="start" font-weight="bold">OFICINA / 02 — Equipes e mecânicos</text>
+<text x="60" y="84" font-size="17" fill="#eae2d4" text-anchor="start" font-weight="normal">A composição registra os mecânicos de cada equipe e o período de participação.</text>
+<polyline points="440,285 620,285" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="451" y="255" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="476" y="273" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="559" y="255" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="584" y="273" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="430" y="205" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="530" y="225" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">possui participação</text>
+<polyline points="1190,285 1020,285" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="1129" y="255" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1154" y="273" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="1031" y="255" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1056" y="273" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="1005" y="205" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="1105" y="225" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">integra</text>
+<polyline points="250,370 250,575 845,575 845,690" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="258" y="380" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="283" y="398" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="853" y="654" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="878" y="672" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="420" y="533" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="520" y="553" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">avalia e executa</text>
+<rect x="60" y="190" width="380" height="180" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="80" y="223" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">EQUIPE</text>
+<line x1="60" y1="240" x2="440" y2="240" stroke="#a99576"/>
+<text x="80" y="270" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK id_equipe</text>
+<text x="80" y="297" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">nome_equipe</text>
+<rect x="620" y="170" width="400" height="260" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="640" y="203" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">COMPOSIÇÃO DA EQUIPE</text>
+<line x1="620" y1="220" x2="1020" y2="220" stroke="#a99576"/>
+<text x="640" y="250" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK, FK id_equipe</text>
+<text x="640" y="277" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK, FK codigo_mecanico</text>
+<text x="640" y="304" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK data_inicio</text>
+<text x="640" y="331" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">data_fim (opcional)</text>
+<rect x="1190" y="170" width="360" height="260" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="1210" y="203" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">MECÂNICO</text>
+<line x1="1190" y1="220" x2="1550" y2="220" stroke="#a99576"/>
+<text x="1210" y="250" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK codigo_mecanico</text>
+<text x="1210" y="277" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">nome</text>
+<text x="1210" y="304" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">endereco</text>
+<text x="1210" y="331" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">especialidade</text>
+<rect x="620" y="690" width="450" height="390" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="640" y="723" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">ORDEM DE SERVIÇO</text>
+<line x1="620" y1="740" x2="1070" y2="740" stroke="#a99576"/>
+<text x="640" y="770" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK numero_os</text>
+<text x="640" y="797" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">FK id_cliente_solicitante</text>
+<text x="640" y="824" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">FK id_veiculo</text>
+<text x="640" y="851" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">FK id_equipe</text>
+<text x="640" y="878" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">data_emissao</text>
+<text x="640" y="905" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">data_prevista_conclusao</text>
+<text x="640" y="932" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">data_efetiva_conclusao (opcional)</text>
+<text x="640" y="959" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">tipo_atendimento: reparo | revisão</text>
+<text x="640" y="986" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">status</text>
+<text x="640" y="1013" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">valor_total (derivado)</text>
+<text x="60" y="1122" font-size="17" fill="#ebc17d" text-anchor="start" font-weight="normal">Equipe pode estar em formação; para assumir uma OS, deve ter ao menos um mecânico ativo.</text>
+<text x="60" y="1155" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK = chave primária   |   FK = chave estrangeira   |   UK = chave única   |   0..N = zero ou muitos   |   0..1 = opcional</text>
+<text x="1530" y="1155" font-size="15" fill="#eae2d4" text-anchor="end" font-weight="normal">Giordani Martins Silva</text>
+</g></svg>
