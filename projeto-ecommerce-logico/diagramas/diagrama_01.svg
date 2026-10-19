@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1180" viewBox="0 0 1600 1180" role="img" aria-labelledby="title desc">
+<title id="title">Clientes, pagamentos e entrega</title><desc id="desc">PF/PJ mapeados em uma tabela com CHECK; os dois subtipos são views, sem tabelas separadas.</desc>
+<g font-family="DejaVu Sans,Arial,sans-serif">
+<rect width="1600" height="1180" fill="#10141b"/>
+<text x="60" y="48" font-size="28" fill="#ebc17d" text-anchor="start" font-weight="bold">E-COMMERCE LÓGICO / 01 — Clientes, pagamentos e entrega</text>
+<text x="60" y="84" font-size="17" fill="#eae2d4" text-anchor="start" font-weight="normal">PF/PJ mapeados em uma tabela com CHECK; os dois subtipos são views, sem tabelas separadas.</text>
+<polyline points="560,220 380,220" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="499" y="190" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="524" y="208" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="391" y="190" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="416" y="208" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..1</text>
+<rect x="360" y="143" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="460" y="163" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">projeção filtrada</text>
+<polyline points="940,220 1120,220" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="951" y="190" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="976" y="208" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="1059" y="190" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1084" y="208" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..1</text>
+<rect x="930" y="143" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="1030" y="163" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">projeção filtrada</text>
+<polyline points="650,330 650,415 260,415 260,510" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="658" y="340" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="683" y="358" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="268" y="474" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="293" y="492" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="330" y="378" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="430" y="398" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">realiza</text>
+<polyline points="850,330 850,415 1250,415 1250,510" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="858" y="340" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="883" y="358" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="1258" y="474" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1283" y="492" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="950" y="378" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="1050" y="398" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">cadastra</text>
+<polyline points="450,620 550,620 550,900 650,900" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="461" y="590" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="486" y="608" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="589" y="870" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="614" y="888" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="447" y="750" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="547" y="770" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">recebe</text>
+<polyline points="1060,620 1030,620 1030,930" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="999" y="590" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1024" y="608" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="1038" y="894" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="1063" y="912" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..N</text>
+<rect x="1030" y="765" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="1130" y="785" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">utilizada em</text>
+<polyline points="260,730 260,860" fill="none" stroke="#a99576" stroke-width="2"/>
+<rect x="268" y="740" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="293" y="758" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">1</text>
+<rect x="268" y="824" width="50" height="24" rx="4" fill="#10141b"/>
+<text x="293" y="842" font-size="17" fill="#ebc17d" text-anchor="middle" font-weight="bold">0..1</text>
+<rect x="160" y="780" width="200" height="28" rx="5" fill="#10141b"/>
+<text x="260" y="800" font-size="16" fill="#eae2d4" text-anchor="middle" font-weight="normal">origina</text>
+<rect x="560" y="110" width="380" height="220" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="580" y="143" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">CLIENTE</text>
+<line x1="560" y1="160" x2="940" y2="160" stroke="#a99576"/>
+<text x="580" y="190" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK id_cliente INT UNSIGNED</text>
+<text x="580" y="217" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">tipo_cliente ENUM (PF | PJ)</text>
+<text x="580" y="244" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">nome_exibicao, email</text>
+<text x="580" y="271" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">atributos PF ou PJ (CHECK XOR)</text>
+<text x="580" y="314" font-size="14" fill="#ebc17d" text-anchor="start" font-weight="normal">Tipos completos e regra no dicionário</text>
+<rect x="60" y="130" width="320" height="180" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="80" y="163" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">VW_CLIENTE_PF (VIEW)</text>
+<line x1="60" y1="180" x2="380" y2="180" stroke="#a99576"/>
+<text x="80" y="210" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">id_cliente (projeção da conta PF)</text>
+<text x="80" y="237" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">cpf</text>
+<text x="80" y="264" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">nome_completo</text>
+<rect x="1120" y="130" width="320" height="180" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="1140" y="163" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">VW_CLIENTE_PJ (VIEW)</text>
+<line x1="1120" y1="180" x2="1440" y2="180" stroke="#a99576"/>
+<text x="1140" y="210" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">id_cliente (projeção da conta PJ)</text>
+<text x="1140" y="237" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">cnpj</text>
+<text x="1140" y="264" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">razao_social</text>
+<rect x="70" y="510" width="380" height="220" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="90" y="543" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">PEDIDO</text>
+<line x1="70" y1="560" x2="450" y2="560" stroke="#a99576"/>
+<text x="90" y="590" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK id_pedido</text>
+<text x="90" y="617" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">FK id_cliente</text>
+<text x="90" y="644" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">data_criacao, status</text>
+<text x="90" y="671" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">endereco_entrega_snapshot</text>
+<text x="90" y="698" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">frete, desconto</text>
+<rect x="1060" y="510" width="380" height="220" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="1080" y="543" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">FORMA_PAGAMENTO</text>
+<line x1="1060" y1="560" x2="1440" y2="560" stroke="#a99576"/>
+<text x="1080" y="590" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK id_forma</text>
+<text x="1080" y="617" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">FK id_cliente</text>
+<text x="1080" y="644" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">tipo ENUM (CARTAO | PIX | BOLETO)</text>
+<text x="1080" y="671" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">apelido / referencia_provedor</text>
+<rect x="650" y="810" width="380" height="240" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="670" y="843" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">PAGAMENTO</text>
+<line x1="650" y1="860" x2="1030" y2="860" stroke="#a99576"/>
+<text x="670" y="890" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK id_pagamento</text>
+<text x="670" y="917" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">FK id_pedido (composta)</text>
+<text x="670" y="944" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">FK id_forma (composta)</text>
+<text x="670" y="971" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">FK id_cliente (mesmo titular)</text>
+<text x="670" y="998" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">valor, status</text>
+<text x="670" y="1025" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">data_pagamento (condicional)</text>
+<rect x="70" y="860" width="430" height="210" rx="10" fill="#1a2029" stroke="#a99576" stroke-width="1.5"/>
+<text x="90" y="893" font-size="19" fill="#ebc17d" text-anchor="start" font-weight="bold">ENTREGA</text>
+<line x1="70" y1="910" x2="500" y2="910" stroke="#a99576"/>
+<text x="90" y="940" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK id_entrega</text>
+<text x="90" y="967" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">UK, FK id_pedido</text>
+<text x="90" y="994" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">status, transportadora</text>
+<text x="90" y="1021" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">codigo_rastreio (condicional)</text>
+<text x="90" y="1048" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">UK (transportadora, codigo_rastreio)</text>
+<text x="60" y="1122" font-size="17" fill="#ebc17d" text-anchor="start" font-weight="normal">Regras: PF XOR PJ; a forma usada pertence ao cliente do pedido; rastreio obrigatório após postagem.</text>
+<text x="60" y="1155" font-size="16" fill="#eae2d4" text-anchor="start" font-weight="normal">PK = chave primária   |   FK = chave estrangeira   |   UK = chave única   |   0..N = zero ou muitos   |   0..1 = opcional</text>
+<text x="1530" y="1155" font-size="15" fill="#eae2d4" text-anchor="end" font-weight="normal">Giordani Martins Silva</text>
+</g></svg>

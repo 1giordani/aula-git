@@ -1,0 +1,16 @@
+TABLE_NAME	CONSTRAINT_NAME	COLUMN_NAME	REFERENCED_TABLE_NAME	REFERENCED_COLUMN_NAME
+entrega	entrega_ibfk_1	id_pedido	pedido	id_pedido
+forma_pagamento	forma_pagamento_ibfk_1	id_cliente	cliente	id_cliente
+fornecimento	fornecimento_ibfk_1	id_fornecedor	fornecedor	id_fornecedor
+fornecimento	fornecimento_ibfk_2	id_produto	produto	id_produto
+item_pedido	item_pedido_ibfk_1	id_pedido	pedido	id_pedido
+item_pedido	item_pedido_ibfk_2	id_oferta	oferta	id_oferta
+oferta	oferta_ibfk_1	id_produto	produto	id_produto
+oferta	oferta_ibfk_2	id_vendedor	vendedor	id_vendedor
+pagamento	pagamento_ibfk_1	id_pedido	pedido	id_pedido
+pagamento	pagamento_ibfk_1	id_cliente	pedido	id_cliente
+pagamento	pagamento_ibfk_2	id_forma	forma_pagamento	id_forma
+pagamento	pagamento_ibfk_2	id_cliente	forma_pagamento	id_cliente
+pedido	pedido_ibfk_1	id_cliente	cliente	id_cliente
+produto_estoque	produto_estoque_ibfk_1	id_produto	produto	id_produto
+produto_estoque	produto_estoque_ibfk_2	id_estoque	estoque	id_estoque

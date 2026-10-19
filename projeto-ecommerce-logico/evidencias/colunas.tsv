@@ -1,0 +1,62 @@
+TABLE_NAME	COLUMN_NAME	COLUMN_TYPE	IS_NULLABLE	COLUMN_KEY	EXTRA
+cliente	id_cliente	int unsigned	NO	PRI	
+cliente	tipo_cliente	enum('PF','PJ')	NO		
+cliente	nome_exibicao	varchar(100)	NO		
+cliente	email	varchar(150)	NO	UNI	
+cliente	cpf	char(11)	YES	UNI	
+cliente	nome_completo	varchar(150)	YES		
+cliente	cnpj	char(14)	YES	UNI	
+cliente	razao_social	varchar(150)	YES		
+entrega	id_entrega	int unsigned	NO	PRI	
+entrega	id_pedido	int unsigned	NO	UNI	
+entrega	status	enum('PREPARANDO','POSTADA','EM_TRANSITO','ENTREGUE','CANCELADA')	NO		
+entrega	transportadora	varchar(80)	YES	MUL	
+entrega	codigo_rastreio	varchar(80)	YES		
+estoque	id_estoque	int unsigned	NO	PRI	
+estoque	localizacao	varchar(120)	NO		
+forma_pagamento	id_forma	int unsigned	NO	PRI	
+forma_pagamento	id_cliente	int unsigned	NO	MUL	
+forma_pagamento	tipo	enum('CARTAO','PIX','BOLETO')	NO		
+forma_pagamento	apelido	varchar(80)	NO		
+forma_pagamento	referencia_provedor	varchar(100)	YES		
+fornecedor	id_fornecedor	int unsigned	NO	PRI	
+fornecedor	razao_social	varchar(120)	NO		
+fornecedor	cnpj	char(14)	NO	UNI	
+fornecimento	id_fornecedor	int unsigned	NO	PRI	
+fornecimento	id_produto	int unsigned	NO	PRI	
+fornecimento	referencia_fornecedor	varchar(80)	YES		
+item_pedido	id_pedido	int unsigned	NO	PRI	
+item_pedido	numero_item	smallint unsigned	NO	PRI	
+item_pedido	id_oferta	int unsigned	NO	MUL	
+item_pedido	quantidade	int	NO		
+item_pedido	preco_unitario_praticado	decimal(10,2)	NO		
+item_pedido	subtotal	decimal(14,2)	YES		STORED GENERATED
+oferta	id_oferta	int unsigned	NO	PRI	
+oferta	id_produto	int unsigned	NO	MUL	
+oferta	id_vendedor	int unsigned	NO	MUL	
+oferta	preco_atual	decimal(10,2)	NO		
+oferta	ativo	tinyint(1)	NO		
+pagamento	id_pagamento	int unsigned	NO	PRI	
+pagamento	id_pedido	int unsigned	NO	MUL	
+pagamento	id_forma	int unsigned	NO	MUL	
+pagamento	id_cliente	int unsigned	NO		
+pagamento	valor	decimal(14,2)	NO		
+pagamento	status	enum('PENDENTE','APROVADO','RECUSADO','CANCELADO')	NO		
+pagamento	data_pagamento	datetime	YES		
+pedido	id_pedido	int unsigned	NO	PRI	
+pedido	id_cliente	int unsigned	NO	MUL	
+pedido	data_criacao	datetime	NO		
+pedido	status	enum('RASCUNHO','CONFIRMADO','EM_PROCESSAMENTO','CONCLUIDO','CANCELADO')	NO		
+pedido	endereco_entrega_snapshot	varchar(250)	NO		
+pedido	frete	decimal(10,2)	NO		
+pedido	desconto	decimal(10,2)	NO		
+produto	id_produto	int unsigned	NO	PRI	
+produto	descricao	varchar(120)	NO		
+produto	categoria	varchar(80)	NO		
+produto_estoque	id_produto	int unsigned	NO	PRI	
+produto_estoque	id_estoque	int unsigned	NO	PRI	
+produto_estoque	quantidade_disponivel	int	NO		
+vendedor	id_vendedor	int unsigned	NO	PRI	
+vendedor	nome	varchar(120)	NO		
+vendedor	cnpj	char(14)	NO	UNI	
+vendedor	tipo	enum('PLATAFORMA','TERCEIRO')	NO

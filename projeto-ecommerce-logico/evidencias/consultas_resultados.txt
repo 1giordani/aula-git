@@ -1,0 +1,105 @@
+Q01 - Quantos pedidos foram feitos por cada cliente, incluindo quem nao possui pedidos?
+id_cliente	nome_exibicao	tipo_cliente	quantidade_pedidos
+1	Cliente Ana	PF	2
+3	Cliente Bruno	PF	2
+2	Empresa Alfa	PJ	1
+4	Empresa Beta	PJ	1
+5	Cliente Eva	PF	0
+
+Q02 - Algum vendedor tambem e fornecedor, identificado pelo mesmo CNPJ?
+id_vendedor	nome	cnpj	id_fornecedor	razao_social
+2	Parceiro Multi	99000000000102	2	Parceiro Multi
+
+Q03 - Quais sao os nomes dos fornecedores e os produtos fornecidos?
+razao_social	descricao	referencia_fornecedor
+Fabricante Demonstracao	Teclado	FAB-T
+Fabricante Demonstracao	Mouse	FAB-M
+Parceiro Multi	Teclado	PAR-T
+Parceiro Multi	Monitor	PAR-V
+Distribuidora Demonstracao	Cabo USB	DIS-C
+
+Q04 - Qual a relacao detalhada entre produtos, fornecedores e estoques?
+id_produto	descricao	fornecedor	localizacao	quantidade
+1	Teclado	Fabricante Demonstracao	Belo Horizonte	20
+1	Teclado	Fabricante Demonstracao	Joao Monlevade	10
+1	Teclado	Parceiro Multi	Belo Horizonte	20
+1	Teclado	Parceiro Multi	Joao Monlevade	10
+2	Mouse	Fabricante Demonstracao	Belo Horizonte	30
+3	Monitor	Parceiro Multi	Joao Monlevade	5
+4	Cabo USB	Distribuidora Demonstracao	Belo Horizonte	100
+5	Webcam	SEM FORNECEDOR	SEM ESTOQUE	0
+
+Q05 - Quais pedidos confirmados ainda possuem saldo a pagar?
+id_pedido	id_cliente	valor_total	valor_aprovado	saldo_pendente
+1003	1	290.00	100.00	190.00
+1006	3	120.00	60.00	60.00
+
+Q06 - Qual o valor de produtos, frete, desconto e total por pedido?
+id_pedido	valor_produtos	frete	desconto	valor_total	status
+1002	900.00	30.00	0.00	930.00	EM_PROCESSAMENTO
+1001	310.00	20.00	10.00	320.00	CONCLUIDO
+1003	280.00	10.00	0.00	290.00	CONFIRMADO
+1006	140.00	0.00	20.00	120.00	CONFIRMADO
+1005	90.00	5.00	0.00	95.00	CANCELADO
+1004	0.00	0.00	0.00	0.00	RASCUNHO
+
+Q07 - Quais clientes cadastraram mais de uma forma de pagamento?
+id_cliente	nome_exibicao	formas
+1	Cliente Ana	2
+
+Q08 - Qual a situacao das entregas e quais sao seus codigos de rastreio?
+id_pedido	nome_exibicao	status_pedido	status_entrega	transportadora	codigo_rastreio
+1001	Cliente Ana	CONCLUIDO	ENTREGUE	Transportadora Exemplo	EX001
+1002	Empresa Alfa	EM_PROCESSAMENTO	EM_TRANSITO	Transportadora Exemplo	EX002
+
+Q09 - Qual o saldo fisico total de cada produto, sem duplicar por fornecedor?
+id_produto	descricao	unidades
+4	Cabo USB	100
+1	Teclado	30
+2	Mouse	30
+3	Monitor	5
+5	Webcam	0
+
+Q10 - Quais vendedores somam pelo menos R$100 em itens de pedidos confirmados ou posteriores, nao cancelados?
+id_vendedor	nome	valor_itens
+2	Parceiro Multi	1180.00
+1	Loja Plataforma	390.00
+
+Q11 - Quais clientes PF e PJ estao cadastrados e quais documentos identificam suas contas?
+id_cliente	tipo_cliente	nome_exibicao	documento
+1	PF	Cliente Ana	11111111111
+3	PF	Cliente Bruno	22222222222
+5	PF	Cliente Eva	33333333333
+2	PJ	Empresa Alfa	99000000001001
+4	PJ	Empresa Beta	99000000001002
+
+Q12 - Quais clientes ainda nao fizeram nenhum pedido?
+id_cliente	nome_exibicao
+5	Cliente Eva
+
+Q13 - Quais itens conservaram preco historico diferente da oferta atual?
+id_pedido	descricao	preco_unitario_praticado	preco_atual	diferenca_unitaria
+1001	Teclado	150.00	160.00	10.00
+
+Q14 - Qual o ranking dos produtos pela quantidade em pedidos confirmados ou posteriores?
+id_produto	descricao	unidades	posicao
+1	Teclado	3	1
+2	Mouse	3	1
+4	Cabo USB	2	2
+3	Monitor	1	3
+5	Webcam	0	4
+
+Q15 - Quanto foi registrado por status de pagamento, sem confundir tentativa com recebimento?
+status	registros	valor
+PENDENTE	1	190.00
+APROVADO	5	1410.00
+RECUSADO	1	95.00
+
+Q16 - Qual a quantidade de itens e pagamentos de cada pedido, sem multiplicar agregacoes?
+id_pedido	linhas_itens	registros_pagamento	valor_total	valor_aprovado	saldo_pendente
+1001	2	2	320.00	320.00	0.00
+1002	1	1	930.00	930.00	0.00
+1003	1	2	290.00	100.00	190.00
+1004	0	0	0.00	0.00	0.00
+1005	1	1	95.00	0.00	95.00
+1006	2	1	120.00	60.00	60.00

@@ -1,0 +1,31 @@
+TABLE_NAME	TABLE_TYPE
+cliente	BASE TABLE
+entrega	BASE TABLE
+estoque	BASE TABLE
+forma_pagamento	BASE TABLE
+fornecedor	BASE TABLE
+fornecimento	BASE TABLE
+item_pedido	BASE TABLE
+oferta	BASE TABLE
+pagamento	BASE TABLE
+pedido	BASE TABLE
+produto	BASE TABLE
+produto_estoque	BASE TABLE
+vendedor	BASE TABLE
+vw_cliente_pf	VIEW
+vw_cliente_pj	VIEW
+vw_saldo_pedido	VIEW
+vw_total_pedido	VIEW
+TRIGGER_NAME
+trg_entrega_bd
+trg_entrega_bi
+trg_entrega_bu
+trg_item_bd
+trg_item_bi
+trg_item_bu
+trg_oferta_bu
+trg_pagamento_bd
+trg_pagamento_bi
+trg_pagamento_bu
+trg_pedido_bi
+trg_pedido_bu

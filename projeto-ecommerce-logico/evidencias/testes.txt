@@ -1,0 +1,62 @@
+PASS: executado 01_estrutura.sql
+PASS: executado 02_regras.sql
+PASS: executado 03_dados.sql
+PASS: tres PF, duas PJ, totais de seis pedidos e pagamentos aprovados 1410.00
+PASS: Q01 - 5 linha(s) conferida(s)
+PASS: Q02 - 1 linha(s) conferida(s)
+PASS: Q03 - 5 linha(s) conferida(s)
+PASS: Q04 - 8 linha(s) conferida(s)
+PASS: Q05 - 2 linha(s) conferida(s)
+PASS: Q06 - 6 linha(s) conferida(s)
+PASS: Q07 - 1 linha(s) conferida(s)
+PASS: Q08 - 2 linha(s) conferida(s)
+PASS: Q09 - 5 linha(s) conferida(s)
+PASS: Q10 - 2 linha(s) conferida(s)
+PASS: Q11 - 5 linha(s) conferida(s)
+PASS: Q12 - 1 linha(s) conferida(s)
+PASS: Q13 - 1 linha(s) conferida(s)
+PASS: Q14 - 5 linha(s) conferida(s)
+PASS: Q15 - 3 linha(s) conferida(s)
+PASS: Q16 - 6 linha(s) conferida(s)
+PASS: fluxo completo ate entrega e conclusao, seguido de rollback integral
+PASS: pagamento dividido quita exatamente 290.00 e rollback preserva tentativa pendente
+PASS: postagem sem rastreio rejeitada pelo CHECK; transacao temporaria revertida
+PASS: rejeitado sem alterar dados - PF com dados PJ
+PASS: rejeitado sem alterar dados - PF sem CPF
+PASS: rejeitado sem alterar dados - PJ com dados PF
+PASS: rejeitado sem alterar dados - PJ sem CNPJ
+PASS: rejeitado sem alterar dados - PF sem nome completo
+PASS: rejeitado sem alterar dados - PJ sem razao
+PASS: rejeitado sem alterar dados - CPF duplicado
+PASS: rejeitado sem alterar dados - CNPJ duplicado
+PASS: rejeitado sem alterar dados - alteracao viola exclusividade
+PASS: rejeitado sem alterar dados - pagador diferente do pedido
+PASS: rejeitado sem alterar dados - forma pertence a outro cliente
+PASS: rejeitado sem alterar dados - aprovacao acima do total
+PASS: rejeitado sem alterar dados - pagamento anterior ao pedido
+PASS: rejeitado sem alterar dados - aprovacao sem data
+PASS: rejeitado sem alterar dados - valor de pagamento zero
+PASS: rejeitado sem alterar dados - editar aprovado
+PASS: rejeitado sem alterar dados - excluir historico pagamento
+PASS: rejeitado sem alterar dados - processar sem quitacao
+PASS: rejeitado sem alterar dados - concluir antes da entrega
+PASS: rejeitado sem alterar dados - cancelar sem estorno
+PASS: rejeitado sem alterar dados - reabrir concluido
+PASS: rejeitado sem alterar dados - confirmar pedido vazio
+PASS: rejeitado sem alterar dados - editar frete confirmado
+PASS: rejeitado sem alterar dados - alterar cliente do pedido
+PASS: rejeitado sem alterar dados - inserir item confirmado
+PASS: rejeitado sem alterar dados - alterar item confirmado
+PASS: rejeitado sem alterar dados - excluir item confirmado
+PASS: rejeitado sem alterar dados - oferta inativa
+PASS: rejeitado sem alterar dados - quantidade zero
+PASS: rejeitado sem alterar dados - reescrever produto da oferta
+PASS: rejeitado sem alterar dados - saldo fisico negativo
+PASS: rejeitado sem alterar dados - produto inexistente no fornecimento
+PASS: rejeitado sem alterar dados - entrega sem processamento
+PASS: rejeitado sem alterar dados - duas entregas no pedido
+PASS: rejeitado sem alterar dados - apagar rastreio postado
+PASS: rejeitado sem alterar dados - excluir historico entrega
+PASS: rejeitado sem alterar dados - retroceder entrega
+PASS: total negativo rejeitado ao confirmar; preparacao do teste removida
+TODOS OS TESTES PASSARAM - MySQL 8.4.6
