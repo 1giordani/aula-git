@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="pagina01" name="Clientes, pagamentos e entrega">
+    <mxGraphModel page="1" pageWidth="1600" pageHeight="1180" background="#10141b" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="heading" value="Clientes, pagamentos e entrega" style="text;html=1;fontColor=#ebc17d;fontSize=27;align=left;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="15" width="1500" height="40" />
+        </mxCell>
+        <mxCell id="subtitle" value="PF ou PJ: especialização total e exclusiva. Cada conta pertence a exatamente um subtipo." style="text;html=1;fontColor=#eae2d4;fontSize=17;align=left;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="60" width="1500" height="40" />
+        </mxCell>
+        <mxCell id="card0True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="496" y="188" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card0False" value="0..1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="388" y="188" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge0" value="especializa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cliente" target="pf">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-45" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card1True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="948" y="188" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card1False" value="0..1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1056" y="188" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge1" value="especializa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cliente" target="pj">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-45" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card2True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="655" y="338" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card2False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="265" y="472" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge2" value="realiza" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=0.23684210526315788;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cliente" target="pedido">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="650" y="415" />
+              <mxPoint x="260" y="415" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card3True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="855" y="338" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card3False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1255" y="472" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge3" value="cadastra" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=0.7631578947368421;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cliente" target="forma">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="850" y="415" />
+              <mxPoint x="1250" y="415" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card4True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="458" y="588" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card4False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="586" y="868" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge4" value="recebe" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.375;entryDx=0;entryDy=0;" edge="1" parent="1" source="pedido" target="pagamento">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="550" y="620" />
+              <mxPoint x="550" y="900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card5True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="996" y="588" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card5False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1035" y="892" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge5" value="utilizada em" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="forma" target="pagamento">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1030" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card6True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="265" y="738" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card6False" value="0..1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="265" y="822" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge6" value="origina" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.4418604651162791;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pedido" target="entrega">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="cliente" value="&lt;b&gt;CLIENTE&lt;/b&gt;&lt;hr/&gt;PK id_cliente&lt;br/&gt;tipo_cliente: PF | PJ&lt;br/&gt;nome_exibicao&lt;br/&gt;email&lt;br/&gt;&lt;i&gt;Especialização total e exclusiva (XOR)&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="560" y="110" width="380" height="220" />
+        </mxCell>
+        <mxCell id="pf" value="&lt;b&gt;PESSOA FÍSICA&lt;/b&gt;&lt;hr/&gt;PK, FK id_cliente&lt;br/&gt;UK cpf&lt;br/&gt;nome_completo" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="130" width="320" height="180" />
+        </mxCell>
+        <mxCell id="pj" value="&lt;b&gt;PESSOA JURÍDICA&lt;/b&gt;&lt;hr/&gt;PK, FK id_cliente&lt;br/&gt;UK cnpj&lt;br/&gt;razao_social" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1120" y="130" width="320" height="180" />
+        </mxCell>
+        <mxCell id="pedido" value="&lt;b&gt;PEDIDO&lt;/b&gt;&lt;hr/&gt;PK id_pedido&lt;br/&gt;FK id_cliente&lt;br/&gt;data_criacao, status_pedido&lt;br/&gt;endereco_entrega_snapshot&lt;br/&gt;frete, desconto" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="70" y="510" width="380" height="220" />
+        </mxCell>
+        <mxCell id="forma" value="&lt;b&gt;FORMA DE PAGAMENTO&lt;/b&gt;&lt;hr/&gt;PK id_forma&lt;br/&gt;FK id_cliente&lt;br/&gt;tipo: cartão | PIX | boleto&lt;br/&gt;apelido / referência do provedor" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1060" y="510" width="380" height="220" />
+        </mxCell>
+        <mxCell id="pagamento" value="&lt;b&gt;PAGAMENTO&lt;/b&gt;&lt;hr/&gt;PK id_pagamento&lt;br/&gt;FK id_pedido&lt;br/&gt;FK id_forma&lt;br/&gt;valor, status_pagamento&lt;br/&gt;data_pagamento (opcional)" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="650" y="810" width="380" height="240" />
+        </mxCell>
+        <mxCell id="entrega" value="&lt;b&gt;ENTREGA&lt;/b&gt;&lt;hr/&gt;PK id_entrega&lt;br/&gt;UK, FK id_pedido&lt;br/&gt;status_entrega, transportadora&lt;br/&gt;codigo_rastreio (condicional)&lt;br/&gt;UK (transportadora, codigo_rastreio)" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="70" y="860" width="430" height="210" />
+        </mxCell>
+        <mxCell id="footer" value="Regras: PF XOR PJ; a forma usada pertence ao cliente do pedido; rastreio obrigatório após postagem." style="text;html=1;align=left;fontSize=17;fontColor=#ebc17d;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="1095" width="1500" height="40" />
+        </mxCell>
+        <mxCell id="legend" value="PK = chave primária | FK = chave estrangeira | UK = chave única | 0..N = zero ou muitos | 0..1 = opcional" style="text;html=1;align=left;fontSize=16;fontColor=#eae2d4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="1130" width="1500" height="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="pagina02" name="Pedidos, produtos e vendedores">
+    <mxGraphModel page="1" pageWidth="1600" pageHeight="1180" background="#10141b" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="heading" value="Pedidos, produtos e vendedores" style="text;html=1;fontColor=#ebc17d;fontSize=27;align=left;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="15" width="1500" height="40" />
+        </mxCell>
+        <mxCell id="subtitle" value="A oferta identifica o produto e quem o vende; o item preserva o preço praticado na compra." style="text;html=1;fontColor=#eae2d4;fontSize=17;align=left;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="60" width="1500" height="40" />
+        </mxCell>
+        <mxCell id="card7True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="448" y="238" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card7False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="536" y="238" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge7" value="contém" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="pedido" target="item">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-45" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card8True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1056" y="238" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card8False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="968" y="238" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge8" value="referenciada em" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=0.0;exitY=0.5185185185185185;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="oferta" target="item">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-45" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card9True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1305" y="682" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card9False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1305" y="408" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge9" value="ofertado em" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=0.5;exitY=0.0;exitDx=0;exitDy=0;entryX=0.5;entryY=1.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="produto" target="oferta">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="card10True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="988" y="783" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card10False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1225" y="408" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge10" value="publica" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.2777777777777778;entryY=1.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="vendedor" target="oferta">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1050" y="815" />
+              <mxPoint x="1050" y="500" />
+              <mxPoint x="1220" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pedido" value="&lt;b&gt;PEDIDO&lt;/b&gt;&lt;hr/&gt;PK id_pedido&lt;br/&gt;FK id_cliente&lt;br/&gt;data_criacao, status_pedido&lt;br/&gt;endereco_entrega_snapshot&lt;br/&gt;frete, desconto" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="160" width="380" height="220" />
+        </mxCell>
+        <mxCell id="item" value="&lt;b&gt;ITEM DO PEDIDO&lt;/b&gt;&lt;hr/&gt;PK, FK id_pedido&lt;br/&gt;PK numero_item&lt;br/&gt;FK id_oferta&lt;br/&gt;quantidade&lt;br/&gt;preco_unitario_praticado" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="600" y="140" width="360" height="260" />
+        </mxCell>
+        <mxCell id="oferta" value="&lt;b&gt;OFERTA&lt;/b&gt;&lt;hr/&gt;PK id_oferta&lt;br/&gt;FK id_produto&lt;br/&gt;FK id_vendedor&lt;br/&gt;preco_atual, ativo&lt;br/&gt;UK (id_produto, id_vendedor)" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1120" y="130" width="360" height="270" />
+        </mxCell>
+        <mxCell id="produto" value="&lt;b&gt;PRODUTO&lt;/b&gt;&lt;hr/&gt;PK id_produto&lt;br/&gt;descricao&lt;br/&gt;categoria" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1120" y="720" width="360" height="190" />
+        </mxCell>
+        <mxCell id="vendedor" value="&lt;b&gt;VENDEDOR&lt;/b&gt;&lt;hr/&gt;PK id_vendedor&lt;br/&gt;nome / razao_social&lt;br/&gt;tipo: plataforma | terceiro" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="590" y="720" width="390" height="190" />
+        </mxCell>
+        <mxCell id="footer" value="Pedido em rascunho pode ter 0 itens; pedido confirmado deve conter 1 ou mais. Quantidade &gt; 0." style="text;html=1;align=left;fontSize=17;fontColor=#ebc17d;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="1095" width="1500" height="40" />
+        </mxCell>
+        <mxCell id="legend" value="PK = chave primária | FK = chave estrangeira | UK = chave única | 0..N = zero ou muitos | 0..1 = opcional" style="text;html=1;align=left;fontSize=16;fontColor=#eae2d4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="1130" width="1500" height="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="pagina03" name="Fornecimento e estoque">
+    <mxGraphModel page="1" pageWidth="1600" pageHeight="1180" background="#10141b" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="heading" value="Fornecimento e estoque" style="text;html=1;fontColor=#ebc17d;fontSize=27;align=left;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="15" width="1500" height="40" />
+        </mxCell>
+        <mxCell id="subtitle" value="Relações N:N são representadas por entidades associativas com chaves compostas." style="text;html=1;fontColor=#eae2d4;fontSize=17;align=left;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="60" width="1500" height="40" />
+        </mxCell>
+        <mxCell id="card11True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="428" y="248" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card11False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="546" y="248" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge11" value="participa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="fornecedor" target="fornecimento">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-45" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card12True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1096" y="248" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card12False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="978" y="248" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge12" value="fornecido em" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=0.0;exitY=0.55;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="produto" target="fornecimento">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-45" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card13True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="428" y="808" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card13False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="546" y="808" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge13" value="armazena" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="estoque" target="produto_estoque">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-45" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card14True" value="1" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1345" y="378" width="56" height="28" />
+        </mxCell>
+        <mxCell id="card14False" value="0..N" style="text;html=1;fontColor=#ebc17d;fontSize=17;fontStyle=1;fillColor=#10141b;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1018" y="808" width="56" height="28" />
+        </mxCell>
+        <mxCell id="edge14" value="possui saldo em" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=1.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="produto" target="produto_estoque">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1340" y="840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fornecedor" value="&lt;b&gt;FORNECEDOR&lt;/b&gt;&lt;hr/&gt;PK id_fornecedor&lt;br/&gt;UK cnpj&lt;br/&gt;razao_social" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="170" width="360" height="220" />
+        </mxCell>
+        <mxCell id="fornecimento" value="&lt;b&gt;FORNECIMENTO&lt;/b&gt;&lt;hr/&gt;PK, FK id_fornecedor&lt;br/&gt;PK, FK id_produto&lt;br/&gt;referencia_fornecedor" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="610" y="170" width="360" height="220" />
+        </mxCell>
+        <mxCell id="produto" value="&lt;b&gt;PRODUTO&lt;/b&gt;&lt;hr/&gt;PK id_produto&lt;br/&gt;descricao&lt;br/&gt;categoria" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1160" y="170" width="360" height="200" />
+        </mxCell>
+        <mxCell id="estoque" value="&lt;b&gt;ESTOQUE&lt;/b&gt;&lt;hr/&gt;PK id_estoque&lt;br/&gt;localizacao" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="750" width="360" height="180" />
+        </mxCell>
+        <mxCell id="produto_estoque" value="&lt;b&gt;PRODUTO NO ESTOQUE&lt;/b&gt;&lt;hr/&gt;PK, FK id_produto&lt;br/&gt;PK, FK id_estoque&lt;br/&gt;quantidade_disponivel" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=15;fillColor=#1a2029;strokeColor=#a99576;fontColor=#eae2d4;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="610" y="730" width="400" height="220" />
+        </mxCell>
+        <mxCell id="footer" value="Saldos são registrados por produto e local de estoque. Quantidade disponível &gt;= 0." style="text;html=1;align=left;fontSize=17;fontColor=#ebc17d;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="1095" width="1500" height="40" />
+        </mxCell>
+        <mxCell id="legend" value="PK = chave primária | FK = chave estrangeira | UK = chave única | 0..N = zero ou muitos | 0..1 = opcional" style="text;html=1;align=left;fontSize=16;fontColor=#eae2d4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="50" y="1130" width="1500" height="40" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
