@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jogo educacional Detona Ralph: acerte o personagem, some pontos e supere seu recorde.">
+  <title>Detona Ralph | Giordani</title>
+  <link rel="icon" href="src/images/favicon.jpg">
+  <link rel="stylesheet" href="src/styles/main.css">
+  <script defer src="src/scripts/game-core.js"></script>
+  <script defer src="src/scripts/engine.js"></script>
+</head>
+<body>
+  <main class="arcade">
+    <header class="heading"><p class="eyebrow">DIO · JAVASCRIPT GAME</p><h1>DETONA <span>RALPH</span></h1><p class="subtitle">Reflexo rápido. Clique certeiro.</p></header>
+    <section class="scoreboard" aria-label="Placar">
+      <div><span class="stat-label">Tempo</span><strong><span id="time-left">60</span><small>s</small></strong></div>
+      <div><span class="stat-label">Pontos</span><strong id="score">0</strong></div>
+      <div><span class="stat-label">Vidas</span><strong class="lives"><img src="src/images/player.png" width="32" height="32" alt=""><span id="lives">3</span></strong></div>
+      <div><span class="stat-label">Recorde</span><strong id="best">0</strong></div>
+    </section>
+    <div class="game-layout">
+      <section class="building" aria-label="Tabuleiro de nove janelas">
+        <div class="roof"><span>FIX-IT ARCADE</span><span class="roof-light" aria-hidden="true"></span></div>
+        <div class="panel" id="board">
+          <button class="square" type="button" data-index="0" aria-label="Janela 1" disabled><span class="window-number" aria-hidden="true">1</span><img class="ralph" src="src/images/ralph.png" alt="" draggable="false"></button>
+          <button class="square" type="button" data-index="1" aria-label="Janela 2" disabled><span class="window-number" aria-hidden="true">2</span><img class="ralph" src="src/images/ralph.png" alt="" draggable="false"></button>
+          <button class="square" type="button" data-index="2" aria-label="Janela 3" disabled><span class="window-number" aria-hidden="true">3</span><img class="ralph" src="src/images/ralph.png" alt="" draggable="false"></button>
+          <button class="square" type="button" data-index="3" aria-label="Janela 4" disabled><span class="window-number" aria-hidden="true">4</span><img class="ralph" src="src/images/ralph.png" alt="" draggable="false"></button>
+          <button class="square" type="button" data-index="4" aria-label="Janela 5" disabled><span class="window-number" aria-hidden="true">5</span><img class="ralph" src="src/images/ralph.png" alt="" draggable="false"></button>
+          <button class="square" type="button" data-index="5" aria-label="Janela 6" disabled><span class="window-number" aria-hidden="true">6</span><img class="ralph" src="src/images/ralph.png" alt="" draggable="false"></button>
+          <button class="square" type="button" data-index="6" aria-label="Janela 7" disabled><span class="window-number" aria-hidden="true">7</span><img class="ralph" src="src/images/ralph.png" alt="" draggable="false"></button>
+          <button class="square" type="button" data-index="7" aria-label="Janela 8" disabled><span class="window-number" aria-hidden="true">8</span><img class="ralph" src="src/images/ralph.png" alt="" draggable="false"></button>
+          <button class="square" type="button" data-index="8" aria-label="Janela 9" disabled><span class="window-number" aria-hidden="true">9</span><img class="ralph" src="src/images/ralph.png" alt="" draggable="false"></button>
+        </div>
+        <div class="building-base" aria-hidden="true"></div>
+      </section>
+      <aside class="controls" aria-label="Controles e instruções">
+        <p class="eyebrow">COMO JOGAR</p><h2>Acerte o Ralph!</h2>
+        <p>Clique ou toque na janela em que ele aparecer. Cada acerto vale <strong>1 ponto</strong>. Clicar em uma janela vazia custa uma vida.</p>
+        <p>Você tem <strong>60 segundos e 3 vidas</strong>. Use também as teclas <kbd>1</kbd> a <kbd>9</kbd> ou navegue com Tab e Enter.</p>
+        <label for="difficulty">Dificuldade</label>
+        <select id="difficulty"><option value="1000">Fácil · 1 segundo</option><option value="700" selected>Normal · 0,7 segundo</option><option value="450">Difícil · 0,45 segundo</option></select>
+        <button class="primary" id="start" type="button">Iniciar jogo</button>
+        <button class="secondary" id="pause" type="button" disabled>Pausar</button>
+        <button class="sound" id="sound" type="button" aria-pressed="false">Som: desligado</button>
+        <p class="status" id="status" role="status" aria-live="polite">Tudo pronto? Clique em iniciar.</p>
+      </aside>
+    </div>
+    <footer>Projeto educacional · Giordani Martins Silva<br><a href="https://github.com/digitalinnovationone/jsgame-detona-ralph">Referência: Digital Innovation One</a></footer>
+  </main>
+</body>
+</html>

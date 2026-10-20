@@ -1,35 +1,7 @@
-# 📘 Aula de Git e GitHub
+# Detona Ralph — Projeto DIO
 
-Repositório de estudos criado para praticar os principais conceitos de versionamento com Git e colaboração pelo GitHub.
+Jogo de reflexos em HTML, CSS e JavaScript de Giordani Martins Silva.
 
-## 🎯 Objetivos
+[Abra o projeto e as instruções](detona-ralph/README.md).
 
-- compreender a diferença entre Git e GitHub;
-- criar e clonar repositórios;
-- registrar alterações com commits;
-- trabalhar com branches;
-- enviar e atualizar projetos remotos;
-- praticar pull requests e resolução de conflitos.
-
-## 🧰 Tecnologias
-
-- Git
-- GitHub
-- Markdown
-- Linha de comando
-
-## 📚 Conteúdo
-
-Consulte o arquivo [comandos-git.md](./comandos-git.md) para ver os comandos essenciais acompanhados de explicações.
-
-## 🔄 Fluxo básico
-
-```text
-Editar → git add → git commit → git push
-```
-
-## 👨‍💻 Autor
-
-**Giordani Martins Silva**
-
-Projeto de estudo desenvolvido durante minha formação em tecnologia.
+Baixe esta branch e abra `detona-ralph/index.html` para jogar. Imagens e som estão incluídos. A descrição para a entrega está em `detona-ralph/ENTREGA-DIO.md`.
