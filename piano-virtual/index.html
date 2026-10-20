@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17181c">
+  <meta name="description" content="Piano virtual com 17 teclas, controle de volume e interação por mouse, toque ou teclado.">
+  <title>Piano Virtual | Giordani</title>
+  <link rel="stylesheet" href="src/styles/main.css">
+  <script defer src="src/scripts/audio-core.js"></script>
+  <script defer src="src/scripts/engine.js"></script>
+</head>
+<body>
+  <main class="studio">
+    <header class="intro"><p class="eyebrow">DIO · JAVASCRIPT MUSIC LAB</p><h1>Suas teclas.<br><span>Sua melodia.</span></h1><p>Um piano virtual para explorar sons e criar no seu ritmo.</p></header>
+    <section class="instrument" aria-labelledby="instrument-title">
+      <div class="control-panel">
+        <div class="brand"><h2 id="instrument-title">PIANO<span> / VIRTUAL</span></h2><p><span class="led" aria-hidden="true"></span>17 TECLAS · SAMPLES LOCAIS</p></div>
+        <div class="settings">
+          <div class="volume-control"><label for="volume">Volume <output id="volume-value" for="volume">50%</output></label><input id="volume" type="range" min="0" max="1" value="0.5" step="0.01" aria-valuetext="50 por cento"></div>
+          <label class="toggle"><input id="show-keys" type="checkbox" checked> Mostrar letras</label>
+          <button id="mute" type="button" class="mute" aria-pressed="false">Silenciar</button>
+        </div>
+      </div>
+      <div class="keyboard-scroll" tabindex="0" role="region" aria-label="Teclado do piano; em telas pequenas, deslize horizontalmente">
+        <div class="piano-keys" id="keyboard">
+          <button type="button" class="key white" data-key="a" aria-label="Tocar tecla A"><span>A</span></button>
+          <button type="button" class="key black" data-key="w" aria-label="Tocar tecla W"><span>W</span></button>
+          <button type="button" class="key white" data-key="s" aria-label="Tocar tecla S"><span>S</span></button>
+          <button type="button" class="key black" data-key="e" aria-label="Tocar tecla E"><span>E</span></button>
+          <button type="button" class="key white" data-key="d" aria-label="Tocar tecla D"><span>D</span></button>
+          <button type="button" class="key black" data-key="f" aria-label="Tocar tecla F"><span>F</span></button>
+          <button type="button" class="key white" data-key="t" aria-label="Tocar tecla T"><span>T</span></button>
+          <button type="button" class="key black" data-key="g" aria-label="Tocar tecla G"><span>G</span></button>
+          <button type="button" class="key white" data-key="y" aria-label="Tocar tecla Y"><span>Y</span></button>
+          <button type="button" class="key black" data-key="h" aria-label="Tocar tecla H"><span>H</span></button>
+          <button type="button" class="key white" data-key="u" aria-label="Tocar tecla U"><span>U</span></button>
+          <button type="button" class="key black" data-key="j" aria-label="Tocar tecla J"><span>J</span></button>
+          <button type="button" class="key white" data-key="k" aria-label="Tocar tecla K"><span>K</span></button>
+          <button type="button" class="key black" data-key="o" aria-label="Tocar tecla O"><span>O</span></button>
+          <button type="button" class="key white" data-key="l" aria-label="Tocar tecla L"><span>L</span></button>
+          <button type="button" class="key black" data-key="p" aria-label="Tocar tecla P"><span>P</span></button>
+          <button type="button" class="key white" data-key=";" aria-label="Tocar tecla ponto e vírgula"><span>;</span></button>
+        </div>
+      </div>
+      <div class="instrument-footer"><span id="last-key" role="status" aria-live="polite">Pronto para tocar</span><span>HTML · CSS · JAVASCRIPT</span></div>
+    </section>
+    <section class="tips" aria-label="Como tocar"><article><span>01 /</span><h2>Escolha como tocar</h2><p>Clique nas teclas, toque na tela ou use as letras indicadas no piano.</p></article><article><span>02 /</span><h2>Combine os sons</h2><p>Pressione teclas diferentes juntas para tocar acordes. Cada nota tem sua própria reprodução.</p></article><article><span>03 /</span><h2>Encontre seu ritmo</h2><p>Ajuste o volume e oculte as letras. No celular, deslize o teclado para alcançar todas as teclas.</p></article></section>
+    <footer>Projeto educacional de Giordani Martins Silva · <a href="https://github.com/felipeAguiarCode/js-music-keyboard-virtual">Referência: Felipe Aguiar / DIO</a></footer>
+    <noscript>Ative o JavaScript para tocar o piano.</noscript>
+  </main>
+</body>
+</html>
