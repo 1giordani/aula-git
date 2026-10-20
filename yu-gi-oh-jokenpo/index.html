@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#161316">
+  <meta name="description" content="Yu-Gi-Oh! Jo-ken-po Edition: um duelo educacional de pedra, papel e tesoura com cartas.">
+  <title>Yu-Gi-Oh! | Jo-ken-po Edition</title>
+  <link rel="stylesheet" href="src/styles/main.css">
+  <script defer src="src/scripts/game-core.js"></script>
+  <script defer src="src/scripts/engine.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar"><div><p class="eyebrow">DIO · DESAFIO JAVASCRIPT</p><h1>YU-GI-OH! <span>Jo-ken-po Edition</span></h1></div><button id="sound" class="quiet" type="button" aria-pressed="false">Som: desligado</button></header>
+    <main class="layout">
+      <aside class="sidebar" aria-label="Placar e regras">
+        <p class="eyebrow">DUELO DOS DESTINOS</p><h2>A primeira vitória<br>começa na escolha.</h2>
+        <div class="scoreboard"><div><span>VOCÊ</span><strong id="player-score">0</strong></div><span class="score-separator">×</span><div><span>COMPUTADOR</span><strong id="opponent-score">0</strong></div></div>
+        <p class="score-meta">Rodada <strong id="round">1</strong> · Empates <strong id="draws">0</strong></p>
+        <p class="goal">Primeiro a conquistar <strong>5 vitórias</strong> vence o duelo.</p>
+        <details open><summary>Regras do duelo</summary>
+          <ul class="rules"><li><span>✊</span><div><strong>Exodia · Pedra</strong><small>Vence Mago Negro</small></div></li><li><span>✋</span><div><strong>Dragão Branco · Papel</strong><small>Vence Exodia</small></div></li><li><span>✌</span><div><strong>Mago Negro · Tesoura</strong><small>Vence Dragão Branco</small></div></li></ul>
+          <p>Escolha uma carta da sua mão. O computador sorteia uma carta, e as duas são reveladas juntas. Cartas iguais empatam.</p>
+        </details>
+        <button id="reset" class="quiet reset" type="button">↻ Novo duelo</button>
+      </aside>
+      <section class="arena" aria-label="Mesa de duelo">
+        <div class="hand-header"><span>COMPUTADOR</span><span>5 CARTAS OCULTAS</span></div>
+        <div class="opponent-hand" aria-hidden="true"><img src="src/assets/icons/card-back.png" alt=""><img src="src/assets/icons/card-back.png" alt=""><img src="src/assets/icons/card-back.png" alt=""><img src="src/assets/icons/card-back.png" alt=""><img src="src/assets/icons/card-back.png" alt=""></div>
+        <div class="battle">
+          <div class="battle-slot"><span>SUA CARTA</span><img id="player-card" src="src/assets/icons/card-back.png" alt="Sua carta ainda não foi escolhida"><strong id="player-name">Faça sua escolha</strong></div>
+          <div class="versus" aria-hidden="true">VS</div>
+          <div class="battle-slot"><span>OPONENTE</span><img id="opponent-card" src="src/assets/icons/card-back.png" alt="Carta do computador ainda oculta"><strong id="opponent-name">Carta oculta</strong></div>
+        </div>
+        <p id="status" class="status" role="status" aria-live="polite">Sua vez! Escolha uma carta abaixo para duelar.</p>
+        <button id="next" class="primary" type="button" disabled>Próxima rodada →</button>
+        <div class="hand-header player-header"><span>SUA MÃO</span><span>CLIQUE PARA ESCOLHER</span></div>
+        <div class="player-hand" id="hand" aria-label="Suas cinco cartas"></div>
+        <p id="preview" class="preview">Use o mouse, toque ou Tab e Enter para jogar.</p>
+      </section>
+    </main>
+    <section class="history-section" aria-labelledby="history-title"><h2 id="history-title">Últimas rodadas</h2><ol id="history"><li>Nenhuma rodada disputada.</li></ol></section>
+    <footer>Projeto educacional de Giordani Martins Silva · <a href="https://github.com/digitalinnovationone/js-yugioh-assets">Recursos e referência: DIO</a><br>Não é um jogo oficial da franquia Yu-Gi-Oh!</footer>
+    <noscript>Ative o JavaScript para iniciar o duelo.</noscript>
+  </div>
+</body>
+</html>

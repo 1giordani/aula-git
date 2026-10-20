@@ -1,0 +1,64 @@
+:root { color-scheme:dark; --bg:#161316; --panel:#211b20; --text:#f0e4cf; --muted:#c9baa7; --gold:#dfb76b; --line:#dfb76b36; }
+* { box-sizing:border-box; }
+body { margin:0; background:radial-gradient(ellipse at top,#50332150,transparent 60%),var(--bg); font-family:Arial,Helvetica,sans-serif; color:var(--text); line-height:1.6; }
+button { font:inherit; cursor:pointer; touch-action:manipulation; }
+button:focus-visible,a:focus-visible,summary:focus-visible { outline:3px solid #ffda83; outline-offset:5px; }
+button:disabled { cursor:default; opacity:.5; }
+.app { width:min(1160px,100% - 3rem); margin:auto; }
+.topbar { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1.7rem 0; border-bottom:1px solid var(--line); }
+.eyebrow { margin:0 0 .4rem; font-size:.6rem; font-weight:bold; letter-spacing:.21em; color:var(--gold); }
+h1 { font:700 clamp(1.6rem,4vw,2.3rem)/1.2 Georgia,serif; margin:0; letter-spacing:.02em; }
+h1 span { display:block; font:normal .73rem/1.5 Arial,sans-serif; color:var(--muted); letter-spacing:.12em; margin-top:.3rem; }
+.quiet { border:1px solid var(--line); border-radius:5px; background:#ffffff04; color:var(--text); padding:.65rem .9rem; font-size:.74rem; }
+.quiet:hover { border-color:var(--gold); }
+.layout { display:grid; grid-template-columns:290px minmax(0,1fr); gap:2rem; margin:2rem 0; align-items:start; }
+.sidebar { padding:1.5rem; border:1px solid var(--line); background:linear-gradient(135deg,#35262c,#211b20); border-radius:10px; }
+.sidebar h2 { font:normal 1.6rem/1.3 Georgia,serif; margin:.6rem 0 1.6rem; }
+.scoreboard { display:flex; justify-content:space-between; align-items:center; text-align:center; gap:.5rem; padding:1rem 0; border-block:1px solid var(--line); }
+.scoreboard div>span { display:block; font-size:.55rem; letter-spacing:.1em; color:var(--muted); }
+.scoreboard strong { display:block; font:normal 2.5rem/1.4 Georgia,serif; color:var(--gold); }
+.score-separator { color:#ad9471; }
+.score-meta { font-size:.7rem; color:var(--muted); text-align:center; }
+.goal { font-size:.79rem; color:var(--muted); margin:1.3rem 0; }
+.goal strong { color:var(--gold); }
+summary { cursor:pointer; font-size:.79rem; font-weight:bold; }
+.rules { list-style:none; margin:.9rem 0; padding:0; display:grid; gap:.8rem; }
+.rules li { display:flex; align-items:center; gap:.75rem; }
+.rules li>span { font-size:1.4rem; }
+.rules strong,.rules small { display:block; }
+.rules strong { font-size:.73rem; }
+.rules small { font-size:.67rem; color:var(--muted); }
+details p { font-size:.73rem; color:var(--muted); }
+.reset { width:100%; margin-top:1rem; }
+.arena { padding:1.4rem; border:1px solid var(--line); border-radius:10px; background:radial-gradient(ellipse at center,#6b3d2240,transparent 70%),repeating-linear-gradient(45deg,#ffffff02 0 1px,transparent 1px 16px),#211b20; }
+.hand-header { display:flex; justify-content:space-between; gap:.5rem; font-size:.57rem; font-weight:bold; letter-spacing:.15em; color:var(--muted); }
+.opponent-hand { display:flex; justify-content:center; gap:.7rem; margin:1rem auto 1.5rem; }
+.opponent-hand img { width:46px; height:66px; object-fit:fill; border:1px solid #8c6840; box-shadow:0 4px 10px #0005; border-radius:3px; }
+.battle { display:grid; grid-template-columns:minmax(0,1fr) 50px minmax(0,1fr); gap:.5rem; align-items:center; max-width:440px; margin:auto; }
+.battle-slot { display:flex; flex-direction:column; align-items:center; gap:.5rem; text-align:center; }
+.battle-slot>span { color:var(--muted); font-size:.58rem; letter-spacing:.15em; }
+.battle-slot img { width:125px; height:175px; max-width:100%; object-fit:contain; filter:drop-shadow(0 5px 8px #0008); }
+.battle-slot strong { font-size:.75rem; font-weight:normal; min-height:1.3rem; }
+.versus { font:italic 1.5rem Georgia,serif; text-align:center; color:var(--gold); }
+.status { min-height:3.4rem; margin:1.3rem 0 .7rem; display:grid; place-items:center; text-align:center; font-size:.82rem; color:#f2d9a5; }
+.status[data-result="lose"] { color:#ffb2a0; }
+.status[data-result="win"] { color:#d6edaa; }
+.primary { display:block; width:min(100%,320px); margin:auto; background:var(--gold); border:1px solid #ffdb99; padding:.7rem; color:#2b1c0c; font-weight:bold; border-radius:5px; font-size:.8rem; }
+.primary:not(:disabled):hover { background:#f6d18e; }
+.player-header { margin-top:1.8rem; }
+.player-hand { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:.6rem; margin-top:1rem; }
+.card { border:1px solid #8b6748; border-radius:5px; background:linear-gradient(145deg,#b78a52,#72502e); color:#fff2db; padding:.3rem; transition:transform .15s; box-shadow:0 4px 8px #0006; }
+.card img { display:block; width:100%; aspect-ratio:5/7; object-fit:contain; }
+.card span { display:block; text-align:center; font-size:.62rem; padding:.2rem 0; }
+.card:not(:disabled):hover,.card:not(:disabled):focus-visible { transform:translateY(-7px); }
+.card.selected { border:2px solid #ffe8b3; opacity:1; }
+.preview { text-align:center; color:var(--muted); font-size:.68rem; min-height:2.2rem; margin:1rem 0 0; }
+.history-section { padding:1rem 1.5rem; border:1px solid var(--line); border-radius:8px; }
+.history-section h2 { font:normal 1.1rem Georgia,serif; color:var(--gold); margin:0 0 .8rem; }
+.history-section ol { margin:0; padding-left:1.3rem; font-size:.76rem; color:var(--muted); }
+.history-section li { padding:.25rem 0; }
+footer { padding:1.5rem 0; text-align:center; font-size:.65rem; color:var(--muted); }
+footer a { color:var(--gold); }
+@media(max-width:850px) { .layout { grid-template-columns:220px minmax(0,1fr); gap:1rem; } .sidebar { padding:1rem; } .arena { padding:1rem; } .battle-slot img { width:100px; height:140px; } }
+@media(max-width:650px) { .app { width:calc(100% - 2rem); } .layout { grid-template-columns:1fr; } .sidebar h2 { display:none; } .sidebar .eyebrow { margin-bottom:.8rem; } .scoreboard { padding:.4rem 1rem; } .scoreboard strong { font-size:2rem; } .goal { margin:.6rem 0; } .reset { margin-top:.6rem; } .topbar { padding:1.2rem 0; } .quiet { font-size:.66rem; padding:.5rem; } .player-hand { gap:.4rem; } .battle-slot img { width:120px; height:168px; } }
+@media(prefers-reduced-motion:reduce) { .card { transition:none; } .card:not(:disabled):hover,.card:not(:disabled):focus-visible { transform:none; } }
