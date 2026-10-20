@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#eee9df">
+  <meta name="description" content="Explore o Mundo Invertido nesta landing page interativa inspirada em Stranger Things e no desafio da DIO.">
+  <title>Mundo Invertido | Uma aventura além de Hawkins</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/core.js"></script>
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body data-theme="normal">
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+  <header class="hero" id="inicio">
+    <nav class="nav" aria-label="Navegação principal"><a class="wordmark" href="#inicio">HAWKINS<span> / 1986</span></a><div><a href="#mundo">O outro lado</a><a href="#galeria">Galeria</a><a href="#clube">Clube D&D</a></div></nav>
+    <div class="hero-content">
+      <p class="eyebrow">UMA JORNADA PARA QUEM NÃO TEM MEDO DO DESCONHECIDO</p>
+      <h1><img src="assets/images/banner/logo.svg" width="600" height="210" alt="Mundo Invertido — Semana Front-end DIO"></h1>
+      <p>O caminho é incerto, repleto de obstáculos e perigos. Mas a recompensa é grande: salvar Hawkins e o mundo das garras de Vecna. Você está preparado para atravessar?</p>
+      <button class="primary switch" id="switch-theme" type="button" aria-pressed="false">Inverter mundos</button>
+      <p class="theme-status" id="theme-status" role="status" aria-live="polite">Você está no mundo normal.</p>
+    </div>
+    <div class="characters" aria-hidden="true"><img class="normal-art" src="assets/images/characters/kids-on-the-bike.svg" alt=""><img class="inverted-art" src="assets/images/characters/inverted-world-monster.svg" alt=""></div>
+    <a class="explore" href="#mundo">EXPLORE O OUTRO LADO ↓</a>
+  </header>
+  <main id="conteudo">
+    <section class="section split" id="mundo" aria-labelledby="world-title">
+      <div><p class="eyebrow">01 / ALÉM DO QUE VOCÊ CONHECE</p><h2 id="world-title">O mundo<br><span>invertido.</span></h2><p>Uma cópia sombria do nosso mundo, habitada por criaturas horrendas, tempestades assustadoras e entidades malignas. Um reino controlado por Vecna, que planeja trazer tudo isso para o nosso lado.</p><p>Em Hawkins, nada é tão simples quanto parece. Às vezes, a única saída é enfrentar o desconhecido.</p></div>
+      <div class="portal-image"><img src="assets/images/content/inverted-world.png" width="450" height="450" alt="Ilustração do Mundo Invertido com atmosfera sombria" loading="lazy"></div>
+    </section>
+    <section class="trailer-band" aria-labelledby="trailer-title"><div class="section split trailer-content">
+      <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/SJ9EFhQ3ANQ" title="Trailer de Stranger Things — quarta temporada" width="560" height="315" loading="lazy" allow="encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      <div><p class="eyebrow">02 / O PERIGO ESTÁ MAIS PERTO</p><h2 id="trailer-title">Stranger Things<br><span>Vol. 4</span></h2><p>Mais experientes, os heróis precisam enfrentar desafios maiores e tomar decisões que mudarão suas vidas. Assista ao trailer e entre no clima desta aventura.</p></div>
+    </div></section>
+    <section class="section gallery-section" id="galeria" aria-labelledby="gallery-title">
+      <p class="eyebrow">03 / UMA HISTÓRIA. MUITOS MISTÉRIOS.</p><h2 id="gallery-title">Hawkins nunca<br>mais foi a mesma.</h2>
+      <ul class="gallery"><li><figure><img src="assets/images/content/serie-image-01.png" width="400" height="300" loading="lazy" alt="Vecna, antagonista de Stranger Things"><figcaption>01 / Uma nova ameaça</figcaption></figure></li><li><figure><img src="assets/images/content/serie-image-02.png" width="400" height="300" loading="lazy" alt="O grupo de amigos de Eleven"><figcaption>02 / Amigos até o fim</figcaption></figure></li><li><figure><img src="assets/images/content/serie-image-03.png" width="400" height="300" loading="lazy" alt="Eleven em uma cena de tensão"><figcaption>03 / Além dos limites</figcaption></figure></li></ul>
+    </section>
+    <section class="club-band" id="clube" aria-labelledby="club-title"><div class="section club-layout">
+      <div class="club-copy"><p class="eyebrow">04 / A PRÓXIMA AVENTURA É SUA</p><h2 id="club-title">Entre para<br>o clube de<br><span>Dungeons<br>& Dragons.</span></h2><p>Gosta de desafios e não tem medo de rodar o D20? Crie um personagem para a próxima campanha e descubra uma experiência de outro mundo.</p><div class="d20" aria-hidden="true">20</div></div>
+      <div class="form-panel"><h3>Seu personagem começa aqui.</h3><p class="demo-note" id="demo-note">Demonstração: use dados fictícios. Os campos serão validados nesta página, sem cadastro ou envio.</p>
+        <form id="club-form" novalidate aria-describedby="demo-note">
+          <div class="field"><label for="name">Nome do aventureiro</label><input id="name" type="text" minlength="2" maxlength="80" required autocomplete="off" placeholder="Ex.: Guardião de Hawkins" aria-describedby="error-name"><span class="error" id="error-name"></span></div>
+          <div class="form-row"><div class="field"><label for="email">E-mail fictício</label><input id="email" type="email" maxlength="254" required autocomplete="off" placeholder="aventureiro@example.com" aria-describedby="error-email"><span class="error" id="error-email"></span></div><div class="field"><label for="level">Nível</label><input id="level" type="number" min="1" max="20" step="1" required placeholder="1–20" aria-describedby="error-level"><span class="error" id="error-level"></span></div></div>
+          <div class="field"><label for="character">Conte sobre seu personagem</label><textarea id="character" rows="5" minlength="20" maxlength="600" required placeholder="Qual é a classe, a história e a maior coragem do seu personagem?" aria-describedby="error-character"></textarea><span class="error" id="error-character"></span></div>
+          <button class="primary" id="submit-form" type="submit" disabled>Criar personagem de demonstração →</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div></section>
+  </main>
+  <footer><p class="footer-title">NEM TODO MUNDO ESTÁ PREPARADO PARA O OUTRO LADO.</p><p>Projeto educacional de Giordani Martins Silva para a DIO.</p><a href="https://github.com/digitalinnovationone/semana-frontend-mundo-invertido">Referência e recursos do projeto</a><small>Stranger Things e seus personagens pertencem aos respectivos titulares. Projeto sem vínculo oficial.</small></footer>
+  <noscript>Ative o JavaScript para trocar os mundos e utilizar o formulário de demonstração.</noscript>
+</body>
+</html>
