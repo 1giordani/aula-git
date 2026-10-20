@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#121316">
+  <meta name="description" content="Explore os filmes e as imagens de cada universo do Homem-Aranha.">
+  <title>Universo Spider-Man | Filmes</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script defer src="../assets/js/data.js"></script>
+  <script defer src="../assets/js/universe.js"></script>
+</head>
+<body class="detail-page">
+  <div class="shell">
+    <header class="topbar"><a class="brand" href="../index.html"><img src="../assets/images/icons/spider.svg" width="32" height="40" alt=""><span>SPIDER-MAN<small>MULTIVERSOS</small></span></a><a class="back" href="../index.html">← Voltar aos universos</a></header>
+    <main>
+      <nav class="hero-nav" id="hero-nav" aria-label="Trocar universo"></nav>
+      <section class="film-layout" aria-labelledby="film-title">
+        <div class="film-copy"><p class="eyebrow" id="universe-name"></p><nav class="film-nav" id="film-nav" aria-label="Selecionar filme"></nav><p id="film-year" class="year"></p><h1 id="film-title"></h1><p id="universe-description" class="film-description"></p><p class="film-note">Selecione um filme para mudar o título, a arte e o vídeo. A galeria abaixo reúne imagens deste universo.</p><button id="open-video" class="primary" type="button">▶ Assistir ao vídeo</button></div>
+        <div class="film-art"><img id="film-logo" alt="" width="500" height="240"><img class="film-character" id="film-character" alt="" width="400" height="500"></div>
+      </section>
+      <section class="gallery-section" aria-labelledby="gallery-title"><div class="gallery-heading"><h2 id="gallery-title">Galeria do universo</h2><span>CLIQUE PARA AMPLIAR</span></div><div class="gallery" id="gallery"></div></section>
+    </main>
+    <footer>Projeto educacional de Giordani Martins Silva · Recursos do projeto de referência da DIO.<small>Imagens e vídeos dependem de conexão à internet.</small></footer>
+  </div>
+  <dialog id="lightbox" aria-label="Imagem ampliada"><button class="close" id="close-lightbox" aria-label="Fechar imagem" type="button">×</button><img id="lightbox-image" alt=""></dialog>
+  <dialog id="video-dialog" aria-labelledby="video-title"><button class="close" id="close-video" aria-label="Fechar vídeo" type="button">×</button><h2 id="video-title">Vídeo do projeto de referência</h2><video id="video" controls playsinline preload="none"></video><p>Recurso educacional do repositório original.</p></dialog>
+  <noscript>Ative o JavaScript para selecionar os filmes e abrir a galeria.</noscript>
+</body>
+</html>

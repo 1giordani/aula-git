@@ -1,35 +1,7 @@
-# 📘 Aula de Git e GitHub
+# Spider-Man — Multiversos
 
-Repositório de estudos criado para praticar os principais conceitos de versionamento com Git e colaboração pelo GitHub.
+Projeto educacional de Giordani Martins Silva para a DIO.
 
-## 🎯 Objetivos
+[Abra o projeto e suas instruções](spider-man-multiverso/README.md).
 
-- compreender a diferença entre Git e GitHub;
-- criar e clonar repositórios;
-- registrar alterações com commits;
-- trabalhar com branches;
-- enviar e atualizar projetos remotos;
-- praticar pull requests e resolução de conflitos.
-
-## 🧰 Tecnologias
-
-- Git
-- GitHub
-- Markdown
-- Linha de comando
-
-## 📚 Conteúdo
-
-Consulte o arquivo [comandos-git.md](./comandos-git.md) para ver os comandos essenciais acompanhados de explicações.
-
-## 🔄 Fluxo básico
-
-```text
-Editar → git add → git commit → git push
-```
-
-## 👨‍💻 Autor
-
-**Giordani Martins Silva**
-
-Projeto de estudo desenvolvido durante minha formação em tecnologia.
+Baixe esta branch e abra `spider-man-multiverso/index.html` com conexão à internet. A descrição está em `spider-man-multiverso/ENTREGA-DIO.md`.

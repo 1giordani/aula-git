@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#121316">
+  <meta name="description" content="Explore três universos do Homem-Aranha em um site com carrossel 3D, páginas de filmes e galeria.">
+  <title>Spider-Man | Multiversos</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/data.js"></script>
+  <script defer src="assets/js/home.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#multiversos">Pular para os universos</a>
+  <div class="shell">
+    <header class="topbar"><a class="brand" href="index.html"><img src="assets/images/icons/spider.svg" width="32" height="40" alt=""><span>SPIDER-MAN<small>MULTIVERSOS</small></span></a><span class="project-tag">DIO · FRONT-END EXPERIENCE</span></header>
+    <main>
+      <section class="intro"><p class="eyebrow">TRÊS HISTÓRIAS. UM MESMO HERÓI.</p><h1>Seu próximo salto<br>é para <span>outro universo.</span></h1><p>Escolha um Homem-Aranha e explore os filmes que dão vida a cada versão do herói.</p></section>
+      <section id="multiversos" class="multiverse" aria-label="Escolha um universo">
+        <div class="stage"><div class="carousel" id="carousel"></div></div>
+        <div class="carousel-controls" id="carousel-controls" aria-label="Controles dos universos"><button type="button" id="previous" class="arrow" aria-label="Universo anterior">←</button><div id="selectors" class="selectors"></div><button type="button" id="next" class="arrow" aria-label="Próximo universo">→</button></div>
+        <p class="selection-status" id="selection-status" role="status" aria-live="polite"></p>
+        <p class="keyboard-tip">Use os botões ou as setas ← → com um controle em foco.</p>
+      </section>
+    </main>
+    <footer>Giordani Martins Silva · Projeto educacional DIO<br><a href="https://github.com/micheleambrosio/spider-man-multiverses-dio">Referência e recursos: Michele Ambrosio</a><small>Spider-Man e os personagens pertencem aos respectivos titulares. Projeto sem vínculo oficial.</small></footer>
+  </div>
+  <noscript>Ative o JavaScript para navegar pelo carrossel e abrir os universos.</noscript>
+</body>
+</html>
