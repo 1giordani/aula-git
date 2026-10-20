@@ -1,35 +1,7 @@
-# 📘 Aula de Git e GitHub
+# Giordani Silva — Portfólio Front-end
 
-Repositório de estudos criado para praticar os principais conceitos de versionamento com Git e colaboração pelo GitHub.
+Portfólio educacional de Giordani Martins Silva para o desafio da DIO.
 
-## 🎯 Objetivos
+[Abra o portfólio e as instruções](portfolio-frontend/README.md).
 
-- compreender a diferença entre Git e GitHub;
-- criar e clonar repositórios;
-- registrar alterações com commits;
-- trabalhar com branches;
-- enviar e atualizar projetos remotos;
-- praticar pull requests e resolução de conflitos.
-
-## 🧰 Tecnologias
-
-- Git
-- GitHub
-- Markdown
-- Linha de comando
-
-## 📚 Conteúdo
-
-Consulte o arquivo [comandos-git.md](./comandos-git.md) para ver os comandos essenciais acompanhados de explicações.
-
-## 🔄 Fluxo básico
-
-```text
-Editar → git add → git commit → git push
-```
-
-## 👨‍💻 Autor
-
-**Giordani Martins Silva**
-
-Projeto de estudo desenvolvido durante minha formação em tecnologia.
+Baixe esta branch e abra `portfolio-frontend/index.html`. A descrição está em `portfolio-frontend/ENTREGA-DIO.md`. Este link do GitHub apresenta o código; não foi realizado deploy de um site público.

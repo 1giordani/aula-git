@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171717">
+  <meta name="description" content="Portfólio de estudos de Giordani Martins Silva. Projetos front-end com HTML, CSS, JavaScript, APIs e jogos desenvolvidos nos desafios da DIO.">
+  <title>Giordani Silva | Portfólio Front-end</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/projects.js"></script>
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="header"><div class="nav-container">
+    <a class="brand" href="#inicio" aria-label="Giordani Silva — início">gs<span>.</span></a>
+    <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Navegação principal"><a href="#inicio" aria-current="location">Início</a><a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Ativar tema claro">☀ <span>Tema</span></button>
+  </div></header>
+  <main id="conteudo">
+    <section class="hero section" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow"><span class="dot" aria-hidden="true"></span>GIORDANI MARTINS SILVA · PORTFÓLIO DE ESTUDOS</p><h1 id="hero-title">Aprendendo<br>na prática.<br><span>Construindo<br>para evoluir.</span></h1><p>Exploro o desenvolvimento front-end com HTML, CSS e JavaScript. Aqui reúno projetos de estudo, desafios e descobertas ao longo dessa jornada.</p><div class="hero-actions"><a class="primary" href="#projetos">Explorar projetos <span aria-hidden="true">↓</span></a><a class="text-link" href="https://github.com/1giordani" target="_blank" rel="noopener noreferrer">Meu GitHub ↗</a></div></div>
+      <div class="hero-visual" aria-label="Ilustração de uma rotina de aprendizado em código"><div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div><div class="code-window"><div class="window-top"><span aria-hidden="true">● ● ●</span><span>minha-jornada.js</span></div><pre><code><span class="code-keyword">const</span> jornada = {
+  foco: <span class="code-string">"front-end"</span>,
+  ferramentas: [
+    <span class="code-string">"HTML"</span>, <span class="code-string">"CSS"</span>,
+    <span class="code-string">"JavaScript"</span>
+  ],
+  método: <span class="code-string">"praticar e evoluir"</span>
+};</code></pre><div class="window-bottom"><span>Um projeto de cada vez.</span><span aria-hidden="true">↗</span></div></div><div class="floating-label" aria-hidden="true">curiosidade → código</div></div>
+    </section>
+    <div class="skills-strip"><div><span>EM PRÁTICA</span><ul aria-label="Tecnologias estudadas"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Git & GitHub</li><li>APIs REST</li></ul></div></div>
+    <section class="section projects-section" id="projetos" aria-labelledby="projects-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / DA TEORIA À TELA</p><h2 id="projects-title">Projetos em destaque<span>.</span></h2></div><p>Desafios educacionais da DIO,<br>com código e documentação disponíveis.</p></div>
+      <div class="project-tools"><div class="filters" aria-label="Filtrar projetos por categoria"><button type="button" data-filter="todos" aria-pressed="true">Todos</button><button type="button" data-filter="interfaces" aria-pressed="false">Interfaces</button><button type="button" data-filter="jogos" aria-pressed="false">Jogos</button><button type="button" data-filter="aplicacoes" aria-pressed="false">Aplicações</button></div><div class="search-wrap"><label for="project-search">Buscar projeto ou tecnologia</label><input id="project-search" type="search" placeholder="Ex.: CSS, API, piano…" maxlength="60"></div></div>
+      <p class="result-count" id="result-count" role="status" aria-live="polite">8 projetos encontrados.</p>
+      <div class="projects-grid">        <article class="project-card" data-project="css">
+          <div class="cover cover-css" aria-hidden="true"><span class="cover-index">01 / ESTUDO</span><strong>CSS</strong><span class="cover-category">INTERFACES</span><div class="cover-shape"></div></div>
+          <div class="card-body"><p class="card-category">Interfaces</p><h3>Landing Page CSS</h3><p>Página da trilha de CSS com gradientes, organização visual e adaptação para diferentes telas.</p><ul class="tags" aria-label="Tecnologias"><li>HTML</li><li>CSS</li><li>Responsividade</li></ul><a class="code-link" href="https://github.com/1giordani/aula-git/tree/projeto-landing-page-css/landing-page-css" target="_blank" rel="noopener noreferrer" aria-label="Ver código de Landing Page CSS no GitHub, abre nova aba">Ver código no GitHub <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="project-card" data-project="pokedex">
+          <div class="cover cover-api" aria-hidden="true"><span class="cover-index">02 / ESTUDO</span><strong>API</strong><span class="cover-category">APLICAÇÕES</span><div class="cover-shape"></div></div>
+          <div class="card-body"><p class="card-category">Aplicações</p><h3>Pokédex de Kanto</h3><p>Catálogo de Pokémon com busca, filtro por tipo, paginação e detalhes consumidos da PokéAPI.</p><ul class="tags" aria-label="Tecnologias"><li>JavaScript</li><li>API REST</li><li>Cache</li></ul><a class="code-link" href="https://github.com/1giordani/aula-git/tree/projeto-pokedex/pokedex" target="_blank" rel="noopener noreferrer" aria-label="Ver código de Pokédex de Kanto no GitHub, abre nova aba">Ver código no GitHub <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="project-card" data-project="ralph">
+          <div class="cover cover-arcade" aria-hidden="true"><span class="cover-index">03 / ESTUDO</span><strong>09</strong><span class="cover-category">JOGOS</span><div class="cover-shape"></div></div>
+          <div class="card-body"><p class="card-category">Jogos</p><h3>Detona Ralph</h3><p>Jogo de reflexos com nove janelas, pontuação, vidas, dificuldades e recorde local.</p><ul class="tags" aria-label="Tecnologias"><li>JavaScript</li><li>DOM</li><li>Eventos</li></ul><a class="code-link" href="https://github.com/1giordani/aula-git/tree/projeto-detona-ralph/detona-ralph" target="_blank" rel="noopener noreferrer" aria-label="Ver código de Detona Ralph no GitHub, abre nova aba">Ver código no GitHub <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="project-card" data-project="memory">
+          <div class="cover cover-memory" aria-hidden="true"><span class="cover-index">04 / ESTUDO</span><strong>↔</strong><span class="cover-category">JOGOS</span><div class="cover-shape"></div></div>
+          <div class="card-body"><p class="card-category">Jogos</p><h3>Memória Animal</h3><p>Jogo de pares com emojis, contador de jogadas, cronômetro e controle de cliques.</p><ul class="tags" aria-label="Tecnologias"><li>JavaScript</li><li>Arrays</li><li>Estado</li></ul><a class="code-link" href="https://github.com/1giordani/aula-git/tree/projeto-jogo-memoria-emojis/emoji-memory-game" target="_blank" rel="noopener noreferrer" aria-label="Ver código de Memória Animal no GitHub, abre nova aba">Ver código no GitHub <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="project-card" data-project="piano">
+          <div class="cover cover-piano" aria-hidden="true"><span class="cover-index">05 / ESTUDO</span><strong>♪</strong><span class="cover-category">APLICAÇÕES</span><div class="cover-shape"></div></div>
+          <div class="card-body"><p class="card-category">Aplicações</p><h3>Piano Virtual</h3><p>Instrumento virtual com 17 sons, controle de volume e interação por mouse, toque ou teclado.</p><ul class="tags" aria-label="Tecnologias"><li>JavaScript</li><li>Áudio</li><li>Teclado</li></ul><a class="code-link" href="https://github.com/1giordani/aula-git/tree/projeto-piano-virtual/piano-virtual" target="_blank" rel="noopener noreferrer" aria-label="Ver código de Piano Virtual no GitHub, abre nova aba">Ver código no GitHub <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="project-card" data-project="yugi">
+          <div class="cover cover-cards" aria-hidden="true"><span class="cover-index">06 / ESTUDO</span><strong>VS</strong><span class="cover-category">JOGOS</span><div class="cover-shape"></div></div>
+          <div class="card-body"><p class="card-category">Jogos</p><h3>Yu-Gi-Oh! Jo-ken-po</h3><p>Pedra, papel e tesoura com cartas, placar, histórico de rodadas e efeitos sonoros opcionais.</p><ul class="tags" aria-label="Tecnologias"><li>JavaScript</li><li>Lógica</li><li>Cartas</li></ul><a class="code-link" href="https://github.com/1giordani/aula-git/tree/projeto-yugioh-jokenpo/yu-gi-oh-jokenpo" target="_blank" rel="noopener noreferrer" aria-label="Ver código de Yu-Gi-Oh! Jo-ken-po no GitHub, abre nova aba">Ver código no GitHub <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="project-card" data-project="mundo">
+          <div class="cover cover-world" aria-hidden="true"><span class="cover-index">07 / ESTUDO</span><strong>⇅</strong><span class="cover-category">INTERFACES</span><div class="cover-shape"></div></div>
+          <div class="card-body"><p class="card-category">Interfaces</p><h3>Mundo Invertido</h3><p>Landing page temática com mudança de mundos, galeria e formulário demonstrativo validado.</p><ul class="tags" aria-label="Tecnologias"><li>CSS</li><li>Temas</li><li>Formulário</li></ul><a class="code-link" href="https://github.com/1giordani/aula-git/tree/projeto-mundo-invertido/mundo-invertido" target="_blank" rel="noopener noreferrer" aria-label="Ver código de Mundo Invertido no GitHub, abre nova aba">Ver código no GitHub <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="project-card" data-project="spider">
+          <div class="cover cover-spider" aria-hidden="true"><span class="cover-index">08 / ESTUDO</span><strong>3D</strong><span class="cover-category">INTERFACES</span><div class="cover-shape"></div></div>
+          <div class="card-body"><p class="card-category">Interfaces</p><h3>Spider-Man Multiversos</h3><p>Carrossel com profundidade, três universos, seleção de filmes e galeria ampliável.</p><ul class="tags" aria-label="Tecnologias"><li>CSS 3D</li><li>Animações</li><li>JavaScript</li></ul><a class="code-link" href="https://github.com/1giordani/aula-git/tree/projeto-spiderman-multiverso/spider-man-multiverso" target="_blank" rel="noopener noreferrer" aria-label="Ver código de Spider-Man Multiversos no GitHub, abre nova aba">Ver código no GitHub <span aria-hidden="true">↗</span></a></div>
+        </article></div><p id="empty-state" class="empty-state" hidden>Nenhum projeto encontrado. Tente outra busca ou categoria.</p>
+    </section>
+    <section class="about-band" id="sobre" aria-labelledby="about-title"><div class="section about-layout"><div><p class="eyebrow">02 / QUEM ESTÁ POR TRÁS DO CÓDIGO</p><h2 id="about-title">Olá, eu sou<br><span>Giordani.</span></h2></div><div class="about-copy"><p class="about-lead">Minha jornada em tecnologia é feita de aprendizado contínuo e prática.</p><p>Uso os desafios da DIO para explorar interfaces, lógica de programação e integração com APIs. Organizo os projetos no GitHub para registrar essa evolução e compartilhar o que estou estudando.</p><p>Este portfólio reúne exercícios educacionais baseados em referências de instrutores, com adaptações, documentação e validações. Cada projeto representa uma oportunidade de entender melhor como as partes de uma aplicação se conectam.</p><div class="learning"><article><span>01</span><h3>Aprender</h3><p>Explorar fundamentos e entender o problema.</p></article><article><span>02</span><h3>Construir</h3><p>Aplicar conceitos em interfaces e interações.</p></article><article><span>03</span><h3>Revisar</h3><p>Verificar o comportamento e documentar decisões.</p></article></div></div></div></section>
+    <section class="section contact-section" id="contato" aria-labelledby="contact-title"><p class="eyebrow">03 / VAMOS CONTINUAR ESSA CONVERSA?</p><h2 id="contact-title">Conheça mais<br>do meu <span>trabalho.</span></h2><p>Os códigos, READMEs e a evolução dos projetos estão no meu perfil do GitHub.</p><a class="primary" href="https://github.com/1giordani" target="_blank" rel="noopener noreferrer">Visitar GitHub de Giordani ↗</a></section>
+  </main>
+  <footer><a class="brand" href="#inicio">gs<span>.</span></a><p>Giordani Martins Silva · Portfólio de estudos front-end<br><a href="https://github.com/elidianaandrade/dio-lab-portfolio">Desafio de referência: Elidiana Andrade / DIO</a></p><a class="back-top" href="#inicio">Voltar ao topo ↑</a></footer>
+</body>
+</html>
