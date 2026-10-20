@@ -1,0 +1,39 @@
+:root { color-scheme:dark; --bg:#15151c; --panel:#202029; --text:#f4eddf; --muted:#c1b9a8; --gold:#f6c867; --line:#ffffff19; }
+* { box-sizing:border-box; }
+body { margin:0; min-height:100vh; background:radial-gradient(ellipse at top right,#553a2a66,transparent 55%),var(--bg); color:var(--text); font-family:Arial,Helvetica,sans-serif; line-height:1.6; }
+button { font:inherit; cursor:pointer; touch-action:manipulation; }
+button:focus-visible,summary:focus-visible,a:focus-visible { outline:3px solid var(--gold); outline-offset:5px; }
+.container { max-width:600px; margin:auto; padding:2.5rem 1.5rem 1.5rem; }
+.eyebrow { margin:0 0 1rem; color:var(--gold); font-size:.63rem; font-weight:700; letter-spacing:.2em; }
+.title-row { display:flex; align-items:center; justify-content:space-between; }
+h1 { font-size:clamp(2.3rem,7vw,3.8rem); line-height:1; letter-spacing:-.06em; margin:0; }
+h1 span { display:block; color:var(--gold); }
+.mascot { display:grid; place-items:center; background:#f6c86712; border:1px solid #f6c86725; width:100px; height:100px; border-radius:24px; font-size:3.6rem; transform:rotate(8deg); }
+.intro { color:var(--muted); font-size:.86rem; margin:1.2rem 0 1.6rem; }
+.scoreboard { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line); background:var(--panel); border-radius:12px; padding:.8rem 0; margin-bottom:1.5rem; }
+.scoreboard>div { text-align:center; border-right:1px solid var(--line); }
+.scoreboard>div:last-child { border:0; }
+.scoreboard>div>span { display:block; font-size:.62rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
+.scoreboard strong { display:block; font:700 1.4rem/1.6 monospace; color:var(--gold); }
+.scoreboard small { color:var(--muted); font-size:.8rem; }
+.play-area { padding:1rem; background:#1a1a23; border:1px solid var(--line); border-radius:16px; }
+.board-label { display:flex; justify-content:space-between; color:var(--muted); font-size:.58rem; letter-spacing:.14em; font-weight:700; padding:0 .25rem .8rem; }
+.game { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.7rem; }
+.card { position:relative; padding:0; border:0; border-radius:10px; aspect-ratio:1; background:transparent; perspective:700px; min-width:0; }
+.card-inner { position:absolute; inset:0; display:block; transform-style:preserve-3d; transition:transform .3s; }
+.card-front,.card-back { position:absolute; inset:0; display:grid; place-items:center; border-radius:10px; backface-visibility:hidden; -webkit-backface-visibility:hidden; }
+.card-back { background:repeating-linear-gradient(135deg,#ffffff03 0 2px,transparent 2px 12px),linear-gradient(135deg,#3b3548,#292532); border:1px solid #9f8ab33b; color:#d5c6e6; font-size:1.7rem; font-weight:700; box-shadow:0 3px 0 #0a0a10; }
+.card:not(:disabled):hover .card-back { border-color:var(--gold); }
+.card-front { transform:rotateY(180deg); background:#f1e5d0; border:2px solid #eadcc0; font-size:clamp(1.5rem,6vw,2.6rem); }
+.card.open .card-inner,.card.matched .card-inner { transform:rotateY(180deg); }
+.card.matched .card-front { background:#dbe6c7; border-color:#a8c784; }
+.card.matched .card-front::after { content:"✓"; position:absolute; right:5px; bottom:2px; color:#36551a; font:bold .7rem Arial; }
+.status { margin:1.2rem 0; min-height:3rem; font-size:.82rem; color:var(--muted); text-align:center; }
+.reset { width:100%; padding:.85rem; border:1px solid var(--gold); border-radius:9px; color:#271c09; background:var(--gold); font-weight:bold; box-shadow:0 3px 0 #8c6423; }
+.reset:hover { background:#ffda8e; }
+details { margin:1.3rem 0 0; border-bottom:1px solid var(--line); padding-bottom:1rem; font-size:.78rem; color:var(--muted); }
+summary { cursor:pointer; color:var(--text); }
+footer { margin-top:1.5rem; font-size:.66rem; text-align:center; color:var(--muted); }
+footer a { color:var(--gold); }
+@media(max-width:380px) { .container { padding:1.5rem 1rem; } .mascot { width:75px; height:75px; font-size:2.5rem; } .game { gap:.5rem; } .play-area { padding:.75rem; } .scoreboard strong { font-size:1.15rem; } }
+@media(prefers-reduced-motion:reduce) { .card-inner { transition:none; } }

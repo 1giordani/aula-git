@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#15151c">
+  <meta name="description" content="Encontre os oito pares neste jogo da memória com emojis, feito com HTML, CSS e JavaScript.">
+  <title>Memória Animal | Jogo da Memória</title>
+  <link rel="stylesheet" href="src/styles/main.css">
+  <script defer src="src/scripts/game-core.js"></script>
+  <script defer src="src/scripts/engine.js"></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">DIO · DESAFIO JAVASCRIPT</p>
+      <div class="title-row"><h1>Memória<span>Animal.</span></h1><span class="mascot" aria-hidden="true">🦊</span></div>
+      <p class="intro">16 cartas. 8 pares. Uma boa dose de concentração.</p>
+    </header>
+    <section class="scoreboard" aria-label="Estatísticas da partida">
+      <div><span>Jogadas</span><strong id="moves">0</strong></div>
+      <div><span>Pares</span><strong><span id="pairs">0</span><small>/8</small></strong></div>
+      <div><span>Tempo</span><strong id="time">00:00</strong></div>
+      <div><span>Recorde</span><strong id="best">—</strong></div>
+    </section>
+    <section class="play-area" aria-label="Jogo da memória">
+      <div class="board-label"><span>ENCONTRE OS PARES</span><span>4 × 4</span></div>
+      <div class="game" id="board" aria-label="Tabuleiro com dezesseis cartas"></div>
+    </section>
+    <p class="status" id="status" role="status" aria-live="polite">Vire uma carta para começar. O relógio inicia na primeira escolha.</p>
+    <button class="reset" id="reset" type="button">↻ Nova partida</button>
+    <details><summary>Como jogar</summary><p>Vire duas cartas por jogada. Se forem iguais, o par fica aberto. Se forem diferentes, as cartas fecham após 850 milissegundos. Encontre os oito pares usando o menor número de jogadas.</p><p>No teclado, use Tab para escolher uma carta e Enter ou Espaço para virar. O recorde registra o menor número de jogadas neste navegador. Uma nova partida zera o tempo e embaralha as cartas.</p></details>
+    <footer>Feito para aprender e se divertir.<br>Giordani Martins Silva · <a href="https://github.com/digitalinnovationone/js-emoji-memory-game">Referência DIO</a></footer>
+    <noscript><p>Ative o JavaScript do navegador para jogar.</p></noscript>
+  </main>
+</body>
+</html>

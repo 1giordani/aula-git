@@ -1,35 +1,7 @@
-# 📘 Aula de Git e GitHub
+# Memória Animal — Projeto DIO
 
-Repositório de estudos criado para praticar os principais conceitos de versionamento com Git e colaboração pelo GitHub.
+Jogo da memória com emojis de Giordani Martins Silva.
 
-## 🎯 Objetivos
+[Abra a pasta do projeto e as instruções](emoji-memory-game/README.md).
 
-- compreender a diferença entre Git e GitHub;
-- criar e clonar repositórios;
-- registrar alterações com commits;
-- trabalhar com branches;
-- enviar e atualizar projetos remotos;
-- praticar pull requests e resolução de conflitos.
-
-## 🧰 Tecnologias
-
-- Git
-- GitHub
-- Markdown
-- Linha de comando
-
-## 📚 Conteúdo
-
-Consulte o arquivo [comandos-git.md](./comandos-git.md) para ver os comandos essenciais acompanhados de explicações.
-
-## 🔄 Fluxo básico
-
-```text
-Editar → git add → git commit → git push
-```
-
-## 👨‍💻 Autor
-
-**Giordani Martins Silva**
-
-Projeto de estudo desenvolvido durante minha formação em tecnologia.
+Baixe esta branch e abra `emoji-memory-game/index.html` para jogar. A descrição para entregar na DIO está em `emoji-memory-game/ENTREGA-DIO.md`.
