@@ -1,0 +1,7 @@
+{
+  "kind": "dry_run",
+  "target": "http://192.168.56.101/dvwa/vulnerabilities/brute/",
+  "user": "admin",
+  "planned_attempts": 3,
+  "network_requests": 0
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "offline_simulation",
+  "mode": "dictionary",
+  "max_failures": 2,
+  "network_requests": 0,
+  "attempts": 4,
+  "authenticated": [
+    "ana"
+  ],
+  "blocked": [
+    "bruno"
+  ],
+  "events": [
+    {
+      "user": "ana",
+      "candidate_index": 1,
+      "result": "failure",
+      "authentication_attempt": true
+    },
+    {
+      "user": "ana",
+      "candidate_index": 2,
+      "result": "success",
+      "authentication_attempt": true
+    },
+    {
+      "user": "bruno",
+      "candidate_index": 1,
+      "result": "failure",
+      "authentication_attempt": true
+    },
+    {
+      "user": "bruno",
+      "candidate_index": 2,
+      "result": "failure",
+      "authentication_attempt": true
+    },
+    {
+      "user": "bruno",
+      "result": "blocked",
+      "authentication_attempt": false
+    }
+  ]
+}
